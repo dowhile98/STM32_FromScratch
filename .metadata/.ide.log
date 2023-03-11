@@ -307,3 +307,9 @@
 2023-03-10 21:15:02,854 [INFO] ApiDb:451 - User favorites Boards=[]
 2023-03-10 21:18:46,847 [INFO] MainUpdater:2800 - connection check result : 10
 2023-03-10 21:18:48,985 [INFO] CheckServerUpdateThread:119 - End of CheckServer Thread
+2023-03-10 22:04:11,434 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2023-03-10 22:04:12,843 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=false
+2023-03-10 22:04:14,667 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] StartTraceHandler.execute(), success : Collect=true
+2023-03-10 22:11:41,877 [INFO] WebAppUi:459 - Close the Jxbrowser engine manually
+2023-03-10 22:11:44,036 [INFO] WebAppUi:462 - Profiles folder deleted
+2023-03-10 22:11:50,534 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 
