@@ -1,14 +1,35 @@
-21:25:00 **** Incremental Build of configuration Debug for project Template ****
+22:01:46 **** Incremental Build of configuration Debug for project GPIO ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/Template/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/Template/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/Template/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "Template.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\Template\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Template.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: Template.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/GPIO/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/GPIO/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/GPIO/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\GPIO\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO.elf
  
-arm-none-eabi-size   Template.elf 
-arm-none-eabi-objdump -h -S  Template.elf  > "Template.list"
+arm-none-eabi-size   GPIO.elf 
+arm-none-eabi-objdump -h -S  GPIO.elf  > "GPIO.list"
    text	   data	    bss	    dec	    hex	filename
-    712	      8	   1568	   2288	    8f0	Template.elf
+   5808	    108	   1588	   7504	   1d50	GPIO.elf
 Finished building: default.size.stdout
  
-Finished building: Template.list
+Finished building: GPIO.list
+ 
+22:01:53 **** Incremental Build of configuration Debug for project GPIO ****
+make -j8 all 
+arm-none-eabi-size   GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5808	    108	   1588	   7504	   1d50	GPIO.elf
+Finished building: default.size.stdout
+ 
+22:02:12 **** Incremental Build of configuration Debug for project GPIO ****
+make -j8 all 
+arm-none-eabi-size   GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5808	    108	   1588	   7504	   1d50	GPIO.elf
+Finished building: default.size.stdout
+ 
+22:02:50 **** Incremental Build of configuration Debug for project GPIO ****
+make -j8 all 
+arm-none-eabi-size   GPIO.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5808	    108	   1588	   7504	   1d50	GPIO.elf
+Finished building: default.size.stdout
  
