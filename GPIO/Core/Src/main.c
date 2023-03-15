@@ -19,20 +19,48 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "stm32f4xx.h"
-
+#include <stdbool.h>
 /*Typedef --------------------------------------------------------------------*/
 
 
 /*Defines ------------------------------------------------------------------- */
+/*
+0x20000000 ==> Base address of SRAM
+0x22000000 ==> Base address of SRAM alias region
+0x40000000 ==> Base address of peripheral region
+0x42000000 ==> Base address of peripheral alias region
+*/
 
+/*
+// Define base address of bit-band
+//#define BITBAND_SRAM_REF 		0x20000000
+//#define BITBAND_SRAM_BASE 	0x22000000
+//#define BITBAND_SRAM(a,b) 	((BITBAND_SRAM_BASE + (a-BITBAND_SRAM_REF)*32 \
+//														+ (b*4))) // Convert SRAM address
+//#define BITBAND_PERI_REF 		0x40000000
+//#define BITBAND_PERI_BASE 	0x42000000
+//#define BITBAND_PERI(a,b) 	((BITBAND_PERI_BASE + (a-BITBAND_PERI_REF)*32 \
+//														+ (b*4))) // Convert PERI address
+*/
+#define BITBAND_PERI(a,b) 		((PERIPH_BB_BASE + (a - PERIPH_BASE)*32 + 4*b))
+
+#define ODR_PD12				*((volatile unsigned char*)(BITBAND_PERI(GPIOD_BASE + 0x14, 12)))
+#define IDR_PA0					*((volatile unsigned char*)(BITBAND_PERI(GPIOA_BASE + 0X10, 0)))
 /*Global variables ---------------------------------------------------------- */
 
 /*function prototype ---------------------------------------------------------*/
-
+/**
+ * @brief lectura del estado del pulsador
+ * @param[GPIO] puntero al puerto a leer
+ * @param[pin] numero del pin a leerse
+ * @return  true/false
+ */
+bool GPIO_PinRead(GPIO_TypeDef *GPIO, uint16_t pin);
 /*main function --------------------------------------------------------------*/
 
 int main(void)
 {
+	//volatile uint8_t *idr0 = (volatile uint8_t*)(BITBAND_PERI(GPIOA_BASE + 0X10, 0));
 	printf("EJEMPLO GPIO1\r\n");
 	printf("%s, %s\r\n", __DATE__, __TIME__);
 	//PD12 (LED1)
@@ -52,13 +80,33 @@ int main(void)
 
 	GPIOD->ODR |= GPIO_ODR_OD12;			//PONE EN ALTO EL PIN
 	GPIOD->ODR &=~ GPIO_ODR_OD12;			//PONE EN BAJO
+
+	//PA0 -> (BUTTON PULL DOWN)
+	RCC->AHB1ENR |= RCC_AHB1ENR_GPIOAEN;
+	GPIOA->MODER &=~ GPIO_MODER_MODE0;		//RESET (INPUT FLOATING)
+	GPIOA->PUPDR &=~ GPIO_PUPDR_PUPD0;		//CLEAR (NO PULL UP, PULL DOWN)
     /* Loop forever */
 	for(;;){
-
+		if(IDR_PA0 == 1){
+			ODR_PD12 = 1;		//TURN ON
+		}else{
+			ODR_PD12 = 0;		//TURN OFF
+		}
 	}
 }
 
 /*Function definition ---------------------------------------------------------*/
+
+bool GPIO_PinRead(GPIO_TypeDef *GPIO, uint16_t pin){
+	uint32_t idr = GPIO->IDR;
+	idr = (idr >> pin) & 0x1U;
+
+	return ((idr == 1)? true : false);
+}
+
+
+
+
 int __io_putchar(int ch){
 	ITM_SendChar(ch);
 	return ch;

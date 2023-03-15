@@ -1,0 +1,5 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SYSTICK_POLLING/Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Core/Src/main.c:41:5:main	8	static
+../Core/Src/main.c:65:6:SysTickInit	16	static
+../Core/Src/main.c:81:6:delay_ms	24	static
+../Core/Src/main.c:94:5:__io_putchar	16	static

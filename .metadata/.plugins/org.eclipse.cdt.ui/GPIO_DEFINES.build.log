@@ -1,0 +1,17 @@
+20:55:51 **** Incremental Build of configuration Debug for project GPIO_DEFINES ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/GPIO_DEFINES/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/GPIO_DEFINES/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/GPIO_DEFINES/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "GPIO_DEFINES.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\GPIO_DEFINES\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO_DEFINES.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: GPIO_DEFINES.elf
+ 
+arm-none-eabi-size   GPIO_DEFINES.elf 
+arm-none-eabi-objdump -h -S  GPIO_DEFINES.elf  > "GPIO_DEFINES.list"
+   text	   data	    bss	    dec	    hex	filename
+   5800	    108	   1588	   7496	   1d48	GPIO_DEFINES.elf
+Finished building: default.size.stdout
+ 
+Finished building: GPIO_DEFINES.list
+ 
+
+20:55:53 Build Finished. 0 errors, 0 warnings. (took 1s.974ms)
+

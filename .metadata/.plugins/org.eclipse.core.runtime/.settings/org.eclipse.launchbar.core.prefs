@@ -2,8 +2,10 @@ LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
 activeLaunchTarget=null\:---
-configDescList=org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO
+configDescList=
 eclipse.preferences.version=1
 org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO/activeLaunchMode=debug
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:GPIO/activeLaunchTarget=null\:---
+org.eclipse.cdt.dsf.gdb.gdbRemotedescriptorType\:SYSTICK_POLLING\ Debug/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:GPIO\ Debug/activeLaunchMode=debug
 org.eclipse.launchbar.core.descriptorType.default\:GPIO\ Debug/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
