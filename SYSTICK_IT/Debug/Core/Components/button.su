@@ -1,0 +1,2 @@
+../Core/Components/button.c:24:6:ButtonInit	24	static
+../Core/Components/button.c:36:6:ButtonRead	16	static

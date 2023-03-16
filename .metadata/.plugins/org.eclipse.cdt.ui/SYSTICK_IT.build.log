@@ -1,0 +1,25 @@
+21:53:13 **** Incremental Build of configuration Debug for project SYSTICK_IT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SYSTICK_IT/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SYSTICK_IT/Core/Components" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SYSTICK_IT/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SYSTICK_IT/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'button1_callback':
+../Core/Src/main.c:80:33: warning: format '%u' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+   80 |  printf("pulsador se presiono..%u\r\n", count);
+      |                                ~^       ~~~~~
+      |                                 |       |
+      |                                 |       uint32_t {aka long unsigned int}
+      |                                 unsigned int
+      |                                %lu
+arm-none-eabi-gcc -o "SYSTICK_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\SYSTICK_IT\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SYSTICK_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SYSTICK_IT.elf
+ 
+arm-none-eabi-size   SYSTICK_IT.elf 
+arm-none-eabi-objdump -h -S  SYSTICK_IT.elf  > "SYSTICK_IT.list"
+   text	   data	    bss	    dec	    hex	filename
+   6812	    112	   1632	   8556	   216c	SYSTICK_IT.elf
+Finished building: default.size.stdout
+ 
+Finished building: SYSTICK_IT.list
+ 
+
+21:53:17 Build Finished. 0 errors, 1 warnings. (took 3s.635ms)
+

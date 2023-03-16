@@ -1,0 +1,34 @@
+/*
+ * button.c
+ *
+ *  Created on: 15 mar. 2023
+ *      Author: jeffr
+ */
+
+#include "button.h"
+
+/*Typedef ----------------------------------------------------------------*/
+typedef enum{
+	PIN_INIT,
+	PIN_HIGH,
+	PIN_LOW,
+	PIN_DEBOUNCE
+}Button_UML_t;
+/**
+ * @brief funcion que inicializa la instancia que represanta un pulsador fisico
+ * @param [BT]: Puntero a una estructura que representa el pulsador
+ * @param [GPIO]: Puerto donde esta conectado el pulsador
+ * @param [pin]: numbero de pin donde esta conectado el pulsador
+ * @param [callback]: puntero a la funcion callback
+ */
+void ButtonInit(Button_t *BT, GPIO_TypeDef *GPIO, uint32_t pin, void (*callback)(void)){
+
+}
+/**
+ * @brief funcion para verificar el estado del pulsador
+ * @param [BT]: Puntero que representa el pulsador fisico
+ * @param [level]: el estado logico a verificar
+ */
+bool ButtonRead(Button_t *BT, Button_state_t level){
+
+}
