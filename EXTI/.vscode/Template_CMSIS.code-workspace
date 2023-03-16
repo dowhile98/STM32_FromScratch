@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"stdint.h": "c",
+			"stm32f4xx.h": "c",
+			"vcruntime.h": "c"
+		}
+	}
+}
