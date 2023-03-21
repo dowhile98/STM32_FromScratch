@@ -1,0 +1,7 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/USART/Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Core/Src/main.c:94:5:main	8	static
+../Core/Src/main.c:138:6:button1_callback	8	static
+../Core/Src/main.c:144:6:USART1_Init	4	static
+../Core/Src/main.c:194:15:UART_SendData	32	static
+../Core/Src/main.c:219:15:UART_ReceiveData	32	static
+../Core/Src/main.c:244:5:__io_putchar	24	static
