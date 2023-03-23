@@ -1,0 +1,5 @@
+../Core/Components/AT_Command_parse.c:15:6:AT_Device_Init	16	static
+../Core/Components/AT_Command_parse.c:27:6:AT_Device_TickInc	16	static
+../Core/Components/AT_Command_parse.c:34:10:AT_Devic_Ticks	16	static
+../Core/Components/AT_Command_parse.c:41:18:AT_Device_SendComand	16	static
+../Core/Components/AT_Command_parse.c:67:21:AT_DeviceUpdate	56	static

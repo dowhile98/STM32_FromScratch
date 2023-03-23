@@ -1,0 +1,18 @@
+/*
+ * AT_Command_parse.c
+ *
+ *  Created on: 22 mar. 2023
+ *      Author: jeffr
+ */
+
+/*Globla variables ----------------------------------*/
+
+/**
+ * @brief inicializar la instancia para el manejo del dispositivo por comandos AT
+ */
+void AT_Device_Init(AT_CMD_Parse_t *dev){
+	//inicializar el buffer
+	lwrb_init(&(), buffdata, size);
+
+	return;
+}

@@ -1,0 +1,10 @@
+22:21:11 **** Incremental Build of configuration Debug for project USART_RING_BUFFER ****
+make -j8 all 
+arm-none-eabi-size   USART_RING_BUFFER.elf 
+   text	   data	    bss	    dec	    hex	filename
+   9816	    112	   2664	  12592	   3130	USART_RING_BUFFER.elf
+Finished building: default.size.stdout
+ 
+
+22:21:12 Build Finished. 0 errors, 0 warnings. (took 881ms)
+
