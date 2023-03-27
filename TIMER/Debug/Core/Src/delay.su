@@ -1,0 +1,5 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/TIMER/Drivers/CMSIS/Include/core_cm4.h:1816:22:__NVIC_SetPriority	16	static
+../Core/Src/delay.c:15:6:SysTickInit	16	static
+../Core/Src/delay.c:39:6:delay_ms	24	static
+../Core/Src/delay.c:50:10:GetTicks	4	static
+../Core/Src/delay.c:55:6:TickInc_Callback	4	static

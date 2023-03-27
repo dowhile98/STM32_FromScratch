@@ -1,0 +1,6 @@
+core_cm4.h:1688:22:__NVIC_EnableIRQ	2
+core_cm4.h:2064:26:ITM_SendChar	4
+main.c:44:5:main	2
+main.c:78:6:button_callback	1
+main.c:87:6:TIMER6_Init	1
+main.c:111:5:__io_putchar	1

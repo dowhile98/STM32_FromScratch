@@ -1,37 +1,14 @@
-22:21:02 **** Incremental Build of configuration Debug for project USART_RING_BUFFER ****
+23:26:44 **** Incremental Build of configuration Debug for project TIMER ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Components/AT_Command_parse.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/USART_RING_BUFFER/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/USART_RING_BUFFER/Middlewares/Third_Party/lwrb" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/USART_RING_BUFFER/Middlewares/Third_Party/lwrb/src" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/USART_RING_BUFFER/Middlewares/Third_Party/lwrb/src/include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/USART_RING_BUFFER/Core/Components" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/USART_RING_BUFFER/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/USART_RING_BUFFER/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Components/AT_Command_parse.d" -MT"Core/Components/AT_Command_parse.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Components/AT_Command_parse.o"
-../Core/Components/AT_Command_parse.c: In function 'AT_Device_SendComand':
-../Core/Components/AT_Command_parse.c:48:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-   48 |   printf("%s", AT);    //OK\r\n
-      |   ^~~~~~
-../Core/Components/AT_Command_parse.c:48:3: warning: incompatible implicit declaration of built-in function 'printf'
-../Core/Components/AT_Command_parse.c:8:1: note: include '<stdio.h>' or provide a declaration of 'printf'
-    7 | #include "AT_Command_Parse.h"
-  +++ |+#include <stdio.h>
-    8 | /*Define -------------------------------------------*/
-../Core/Components/AT_Command_parse.c:45:2: warning: enumeration value 'CMD_NONE' not handled in switch [-Wswitch]
-   45 |  switch(cmd){
-      |  ^~~~~~
-../Core/Components/AT_Command_parse.c: In function 'AT_DeviceUpdate':
-../Core/Components/AT_Command_parse.c:72:3: warning: enumeration value 'CMD_NONE' not handled in switch [-Wswitch]
-   72 |   switch(dev->ACTIV_CMD){
-      |   ^~~~~~
-arm-none-eabi-gcc -o "USART_RING_BUFFER.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\USART_RING_BUFFER\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART_RING_BUFFER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: USART_RING_BUFFER.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/TIMER/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/TIMER/Core/Components" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/TIMER/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/TIMER/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "TIMER.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\TIMER\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TIMER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TIMER.elf
  
-arm-none-eabi-size   USART_RING_BUFFER.elf 
-arm-none-eabi-objdump -h -S  USART_RING_BUFFER.elf  > "USART_RING_BUFFER.list"
+arm-none-eabi-size   TIMER.elf 
+arm-none-eabi-objdump -h -S  TIMER.elf  > "TIMER.list"
    text	   data	    bss	    dec	    hex	filename
-   9816	    112	   2664	  12592	   3130	USART_RING_BUFFER.elf
+   7112	    112	   1624	   8848	   2290	TIMER.elf
 Finished building: default.size.stdout
  
-Finished building: USART_RING_BUFFER.list
- 
-22:21:11 **** Incremental Build of configuration Debug for project USART_RING_BUFFER ****
-make -j8 all 
-arm-none-eabi-size   USART_RING_BUFFER.elf 
-   text	   data	    bss	    dec	    hex	filename
-   9816	    112	   2664	  12592	   3130	USART_RING_BUFFER.elf
-Finished building: default.size.stdout
+Finished building: TIMER.list
  

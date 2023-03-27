@@ -1,0 +1,68 @@
+/*
+ * buttonV2.c
+ *
+ *  Created on: 24 mar. 2023
+ *      Author: jeffr
+ */
+
+
+#include "buttonV2.h"
+#include "delay.h"
+
+
+void Button_InitTime(Button_Time_t *BT, GPIO_TypeDef *GPIOx, uint8_t pin, void (*f)(void)){
+	BT->GPIO = GPIOX;
+	BT->pin = pin;
+	BT->callback = f;
+	//estado inicial
+	BT->pulseCount = 0;
+	BT->state = BT_INIT_STATE;
+	return;
+}
+
+
+void Button_Update(Button_Time_t *BT){
+	BT->ticks += 5;
+	switch(BT->state){
+	case BT_INIT_STATE:
+		if(BT->GPIO->IDR & (1<<BT->pin)){
+			BT->state = BT_HIGH_STATE;
+		}else{
+			BT->state = BT_LOW_STATE;
+		}
+		break;
+	case BT_HIGH_STATE:
+		if(!(BT->GPIO->IDR & (1<<BT->pin))){ //cambio de estado a bajo
+			BT->state = BT_DEBOUNCE_STATE;
+			BT->tickstart= BT->ticks;
+		}
+		break;
+	case BT_LOW_STATE:
+		if(BT->GPIO->IDR & (1<<BT->pin)){ //cambio de estado a alto
+			BT->state = BT_DEBOUNCE_STATE;
+			BT->tickstart= BT->ticks;
+		}
+		break;
+	case BT_DEBOUNCE_STATE:
+		if((BT->ticks - BT->tickstart)>= 15){
+			//SE VERIFICA EL ESTADO ACTUAL DEL PIN
+			if(BT->GPIO->IDR & (1<<BT->pin)){
+				//PULSO VALIDO (verifica el estado anterior)
+				if(BT->isPulse == false){
+					BT->isPulse = true;
+					BT->pulseCount = 0;
+					BT->tickstart = BT->ticks; //para iniciar el contador del timer
+				}
+				BT->state = BT_PULSE_COUNT;
+			}
+		}
+		break;
+	case BT_TIME_VERIFY:
+		if((GetTicks() - ))
+		break;
+	case BT_PULSE_COUNT:
+		BT->pulseCount += 1;
+		BT->state = BT_TIME_VERIFY;
+		break;
+	}
+}

@@ -1,0 +1,15 @@
+/*
+ * buttonV2.c
+ *
+ *  Created on: 24 mar. 2023
+ *      Author: jeffr
+ */
+
+
+#include "buttonV2.h"
+
+void Button_InitTime(Button_Time_t *BT, GPIO_TypeDef *GPIOx, uint8_t pin, void (*f)(void)){
+	BT->GPIO = GPIOX;
+	BT->pin = pin;
+	BT->callback = f;
+}
