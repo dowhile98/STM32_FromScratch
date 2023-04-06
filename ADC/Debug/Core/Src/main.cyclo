@@ -1,0 +1,6 @@
+core_cm4.h:1688:22:__NVIC_EnableIRQ	2
+core_cm4.h:2064:26:ITM_SendChar	4
+main.c:47:5:main	2
+main.c:113:6:ADC1_Init	1
+main.c:133:6:ADC1_CpltConvCallback	1
+main.c:140:5:__io_putchar	1

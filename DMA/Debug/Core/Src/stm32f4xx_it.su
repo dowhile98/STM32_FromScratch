@@ -1,0 +1,2 @@
+../Core/Src/stm32f4xx_it.c:17:6:SysTick_Handler	8	static
+../Core/Src/stm32f4xx_it.c:21:6:DMA2_Stream4_IRQHandler	8	static

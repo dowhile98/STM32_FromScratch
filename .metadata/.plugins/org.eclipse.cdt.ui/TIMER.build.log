@@ -1,17 +1,10 @@
-23:26:44 **** Incremental Build of configuration Debug for project TIMER ****
+20:34:44 **** Incremental Build of configuration Debug for project TIMER ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/TIMER/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/TIMER/Core/Components" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/TIMER/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/TIMER/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "TIMER.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\TIMER\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TIMER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TIMER.elf
- 
 arm-none-eabi-size   TIMER.elf 
-arm-none-eabi-objdump -h -S  TIMER.elf  > "TIMER.list"
    text	   data	    bss	    dec	    hex	filename
-   7112	    112	   1624	   8848	   2290	TIMER.elf
+   7116	    112	   1624	   8852	   2294	TIMER.elf
 Finished building: default.size.stdout
  
-Finished building: TIMER.list
- 
 
-23:26:48 Build Finished. 0 errors, 0 warnings. (took 3s.489ms)
+20:34:44 Build Finished. 0 errors, 0 warnings. (took 772ms)
 

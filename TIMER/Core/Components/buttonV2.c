@@ -9,7 +9,10 @@
 #include "buttonV2.h"
 #include "delay.h"
 
-
+//static bool pinChangeVerify(Button_Time_t *BT){
+//	//todo
+//
+//}
 void Button_InitTime(Button_Time_t *BT, GPIO_TypeDef *GPIOx, uint8_t pin, void (*f)(uint8_t pulse)){
 	BT->GPIO = GPIOx;
 	BT->pin = pin;
@@ -33,6 +36,7 @@ void Button_Update(Button_Time_t *BT){
 		}
 		break;
 	case BT_HIGH_STATE:
+
 		if(!(BT->GPIO->IDR & (1<<BT->pin))){ //cambio de estado a bajo
 			BT->state = BT_DEBOUNCE_STATE;
 			BT->tickstart= BT->ticks;

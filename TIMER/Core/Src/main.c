@@ -63,6 +63,7 @@ int main(void)
 	Button_InitTime(&button, GPIOA, 0, button_callback);
     /* Loop forever */
 	for(;;){
+
 		if((int8_t)ledBlinkCount > 0){			//blink en relacion a cantidad de pulsos ingresados
 			GPIOX_ODR(LED) = 1;
 			delay_ms(100);
