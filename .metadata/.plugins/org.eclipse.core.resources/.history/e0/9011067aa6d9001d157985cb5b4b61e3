@@ -1,0 +1,41 @@
+/*
+ * mpu6050.h
+ *
+ *  Created on: 12 abr. 2023
+ *      Author: jeffr
+ */
+
+#ifndef COMPONENTS_MPU6050_H_
+#define COMPONENTS_MPU6050_H_
+
+/*Include ------------------------------------------------*/
+#include <stdint.h>
+#include <stdbool.h>
+#include <stm32f4xx.h>
+/*Typedef ----------------------------------------------- */
+typedef bool (*mpu6050_write_fptr_t)(I2C_TypeDef *I2Cx, uint8_t slaveAddr,uint8_t reg_addr, uint8_t *pData, uint32_t Len, uint32_t timeout);
+typedef bool (*mpu6050_read_fptr_t)(I2C_TypeDef *I2Cx, uint8_t slaveAddr,uint8_t reg_addr, uint8_t *pData, uint32_t Len, uint32_t timeout);
+
+
+
+typedef struct{
+	mpu6050_read_fptr_t read;
+	mpu6050_write_fptr_t write;
+
+}MPU6050_t;
+/*Defines ------------------------------------------------*/
+/**
+ * @brief  Data rates predefined constants
+ * @{
+ */
+#define MPU6050_DataRate_8KHz       0   /*!< Sample rate set to 8 kHz */
+#define MPU6050_DataRate_4KHz       1   /*!< Sample rate set to 4 kHz */
+#define MPU6050_DataRate_2KHz       3   /*!< Sample rate set to 2 kHz */
+#define MPU6050_DataRate_1KHz       7   /*!< Sample rate set to 1 kHz */
+#define MPU6050_DataRate_500Hz      15  /*!< Sample rate set to 500 Hz */
+#define MPU6050_DataRate_250Hz      31  /*!< Sample rate set to 250 Hz */
+#define MPU6050_DataRate_125Hz      63  /*!< Sample rate set to 125 Hz */
+#define MPU6050_DataRate_100Hz      79  /*!< Sample rate set to 100 Hz */
+/*Function prototype -------------------------------------*/
+
+#endif /* COMPONENTS_MPU6050_H_ */

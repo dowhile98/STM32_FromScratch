@@ -1,0 +1,4 @@
+../Core/App/driver_mpu6050_fifo.c:48:9:mpu6050_fifo_irq_handler	8	static
+../Core/App/driver_mpu6050_fifo.c:68:9:mpu6050_fifo_init	24	static
+../Core/App/driver_mpu6050_fifo.c:538:9:mpu6050_fifo_read	32	static
+../Core/App/driver_mpu6050_fifo.c:560:9:mpu6050_fifo_deinit	8	static

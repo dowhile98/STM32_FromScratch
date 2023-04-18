@@ -1,0 +1,12 @@
+../Core/Components/mpu6050.c:64:25:mpu6050_set_standby_mode	40	static
+../Core/Components/mpu6050.c:92:18:MPU6050_Init	40	static
+../Core/Components/mpu6050.c:180:18:MPU6050_SetGyroscope	40	static
+../Core/Components/mpu6050.c:212:18:MPU6050_SetAccelerometer	40	static
+../Core/Components/mpu6050.c:244:18:MPU6050_SetDataRate	32	static
+../Core/Components/mpu6050.c:256:18:MPU6050_EnableInterrupts	40	static
+../Core/Components/mpu6050.c:283:18:MPU6050_DisableInterrupts	40	static
+../Core/Components/mpu6050.c:298:18:MPU6050_ReadInterrupts	40	static
+../Core/Components/mpu6050.c:316:18:MPU6050_ReadAccelerometer	40	static
+../Core/Components/mpu6050.c:337:18:MPU6050_ReadGyroscope	40	static
+../Core/Components/mpu6050.c:358:18:MPU6050_ReadTemperature	40	static
+../Core/Components/mpu6050.c:376:18:MPU6050_ReadAll	48	static

@@ -1,0 +1,13 @@
+/*
+ * mpu6050.h
+ *
+ *  Created on: 12 abr. 2023
+ *      Author: jeffr
+ */
+
+#ifndef COMPONENTS_MPU6050_H_
+#define COMPONENTS_MPU6050_H_
+
+
+
+#endif /* COMPONENTS_MPU6050_H_ */

@@ -1,0 +1,5 @@
+driver_mpu6050_dmp.c:48:9:mpu6050_dmp_irq_handler	2
+driver_mpu6050_dmp.c:71:9:mpu6050_dmp_init	77
+driver_mpu6050_dmp.c:865:9:mpu6050_dmp_get_pedometer_counter	2
+driver_mpu6050_dmp.c:892:9:mpu6050_dmp_read_all	2
+driver_mpu6050_dmp.c:919:9:mpu6050_dmp_deinit	2

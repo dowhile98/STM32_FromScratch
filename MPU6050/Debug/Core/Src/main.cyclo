@@ -1,0 +1,5 @@
+core_cm4.h:2064:26:ITM_SendChar	4
+main.c:63:1:lwprintf_my_out_func	2
+main.c:84:5:main	1
+main.c:137:6:SystemClock_Config	3
+main.c:182:6:Error_Handler	1

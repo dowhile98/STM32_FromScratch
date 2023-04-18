@@ -1,0 +1,12 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/MPU650_LibDriver/Drivers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/MPU650_LibDriver/Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Core/Src/main.c:73:5:main	168	static
+../Core/Src/main.c:106:6:I2C1_Init	16	static
+../Core/Src/main.c:159:6:I2C_MasterSendData	40	static
+../Core/Src/main.c:221:6:I2C_isDeviceConnected	40	static
+../Core/Src/main.c:263:6:I2C_MasterReceiveData	40	static
+../Core/Src/main.c:333:6:i2c_write_reg	40	static
+../Core/Src/main.c:341:6:i2c_read_reg	32	static
+../Core/Src/main.c:352:6:GPIO_Config	8	static
+../Core/Src/main.c:374:6:EXTI9_5_IRQHandler	4	static
+../Core/Src/main.c:384:5:__io_putchar	16	static

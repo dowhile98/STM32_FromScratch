@@ -1,0 +1,161 @@
+/*
+ * mpu6050.c
+ *
+ *  Created on: 12 abr. 2023
+ *      Author: jeffr
+ */
+
+#include "mpu6050.h"
+
+/*Defines -----------------------------------------------------------*/
+/* Default I2C address */
+#define MPU6050_I2C_ADDR			0xD0
+
+/* Who I am register value */
+#define MPU6050_I_AM				0x68
+
+/* MPU6050 registers */
+#define MPU6050_AUX_VDDIO			0x01
+#define MPU6050_SMPLRT_DIV			0x19
+#define MPU6050_CONFIG				0x1A
+#define MPU6050_GYRO_CONFIG			0x1B
+#define MPU6050_ACCEL_CONFIG		0x1C
+#define MPU6050_MOTION_THRESH		0x1F
+#define MPU6050_INT_PIN_CFG			0x37
+#define MPU6050_INT_ENABLE			0x38
+#define MPU6050_INT_STATUS			0x3A
+#define MPU6050_ACCEL_XOUT_H		0x3B
+#define MPU6050_ACCEL_XOUT_L		0x3C
+#define MPU6050_ACCEL_YOUT_H		0x3D
+#define MPU6050_ACCEL_YOUT_L		0x3E
+#define MPU6050_ACCEL_ZOUT_H		0x3F
+#define MPU6050_ACCEL_ZOUT_L		0x40
+#define MPU6050_TEMP_OUT_H			0x41
+#define MPU6050_TEMP_OUT_L			0x42
+#define MPU6050_GYRO_XOUT_H			0x43
+#define MPU6050_GYRO_XOUT_L			0x44
+#define MPU6050_GYRO_YOUT_H			0x45
+#define MPU6050_GYRO_YOUT_L			0x46
+#define MPU6050_GYRO_ZOUT_H			0x47
+#define MPU6050_GYRO_ZOUT_L			0x48
+#define MPU6050_MOT_DETECT_STATUS	0x61
+#define MPU6050_SIGNAL_PATH_RESET	0x68
+#define MPU6050_MOT_DETECT_CTRL		0x69
+#define MPU6050_USER_CTRL			0x6A
+#define MPU6050_PWR_MGMT_1			0x6B
+#define MPU6050_PWR_MGMT_2			0x6C
+#define MPU6050_FIFO_COUNTH			0x72
+#define MPU6050_FIFO_COUNTL			0x73
+#define MPU6050_FIFO_R_W			0x74
+#define MPU6050_WHO_AM_I			0x75
+
+/* Gyro sensitivities in degrees/s */
+#define MPU6050_GYRO_SENS_250		((float) 131)
+#define MPU6050_GYRO_SENS_500		((float) 65.5)
+#define MPU6050_GYRO_SENS_1000		((float) 32.8)
+#define MPU6050_GYRO_SENS_2000		((float) 16.4)
+
+/* Acce sensitivities in g/s */
+#define MPU6050_ACCE_SENS_2			((float) 16384)
+#define MPU6050_ACCE_SENS_4			((float) 8192)
+#define MPU6050_ACCE_SENS_8			((float) 4096)
+#define MPU6050_ACCE_SENS_16		((float) 2048)
+/*Function definition -----------------------------------------------*/
+/**
+ * @brief  Initializes MPU6050 and I2C peripheral
+ * @param  *DataStruct: Pointer to empty @ref TM_MPU6050_t structure
+ * @param  DeviceNumber: MPU6050 has one pin, AD0 which can be used to set address of device.
+ *          This feature allows you to use 2 different sensors on the same board with same library.
+ *          If you set AD0 pin to low, then this parameter should be TM_MPU6050_Device_0,
+ *          but if AD0 pin is high, then you should use TM_MPU6050_Device_1
+ *
+ *          Parameter can be a value of @ref TM_MPU6050_Device_t enumeration
+ * @param  AccelerometerSensitivity: Set accelerometer sensitivity. This parameter can be a value of @ref TM_MPU6050_Accelerometer_t enumeration
+ * @param  GyroscopeSensitivity: Set gyroscope sensitivity. This parameter can be a value of @ref TM_MPU6050_Gyroscope_t enumeration
+ * @retval Initialization status:
+ *            - TM_MPU6050_Result_t: Everything OK
+ *            - Other member: in other cases
+ */
+MPU6050_Result_t TM_MPU6050_Init(MPU6050_t* DataStruct, MPU6050_Device_t DeviceNumber, MPU6050_Accelerometer_t AccelerometerSensitivity, MPU6050_Gyroscope_t GyroscopeSensitivity);
+
+/**
+ * @brief  Sets gyroscope sensitivity
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure indicating MPU6050 device
+ * @param  GyroscopeSensitivity: Gyro sensitivity value. This parameter can be a value of @ref TM_MPU6050_Gyroscope_t enumeration
+ * @retval Member of @ref TM_MPU6050_Result_t enumeration
+ */
+MPU6050_Result_t TM_MPU6050_SetGyroscope(MPU6050_t* DataStruct, MPU6050_Gyroscope_t GyroscopeSensitivity);
+
+/**
+ * @brief  Sets accelerometer sensitivity
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure indicating MPU6050 device
+ * @param  AccelerometerSensitivity: Gyro sensitivity value. This parameter can be a value of @ref TM_MPU6050_Accelerometer_t enumeration
+ * @retval Member of @ref TM_MPU6050_Result_t enumeration
+ */
+MPU6050_Result_t MPU6050_SetAccelerometer(MPU6050_t* DataStruct, MPU6050_Accelerometer_t AccelerometerSensitivity);
+
+/**
+ * @brief  Sets output data rate
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure indicating MPU6050 device
+ * @param  rate: Data rate value. An 8-bit value for prescaler value
+ * @retval Member of @ref TM_MPU6050_Result_t enumeration
+ */
+MPU6050_Result_t MPU6050_SetDataRate(MPU6050_t* DataStruct, uint8_t rate);
+
+/**
+ * @brief  Enables interrupts
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure indicating MPU6050 device
+ * @retval Member of @ref TM_MPU6050_Result_t enumeration
+ */
+MPU6050_Result_t TM_MPU6050_EnableInterrupts(MPU6050_t* DataStruct);
+
+/**
+ * @brief  Disables interrupts
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure indicating MPU6050 device
+ * @retval Member of @ref TM_MPU6050_Result_t enumeration
+ */
+MPU6050_Result_t MPU6050_DisableInterrupts(MPU6050_t* DataStruct);
+
+/**
+ * @brief  Reads and clears interrupts
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure indicating MPU6050 device
+ * @param  *InterruptsStruct: Pointer to @ref TM_MPU6050_Interrupt_t structure to store status in
+ * @retval Member of @ref TM_MPU6050_Result_t enumeration
+ */
+MPU6050_Result_t MPU6050_ReadInterrupts(MPU6050_t* DataStruct, MPU6050_Interrupt_t* InterruptsStruct);
+
+/**
+ * @brief  Reads accelerometer data from sensor
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure to store data to
+ * @retval Member of @ref TM_MPU6050_Result_t:
+ *            - TM_MPU6050_Result_Ok: everything is OK
+ *            - Other: in other cases
+ */
+MPU6050_Result_t MPU6050_ReadAccelerometer(MPU6050_t* DataStruct);
+
+/**
+ * @brief  Reads gyroscope data from sensor
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure to store data to
+ * @retval Member of @ref TM_MPU6050_Result_t:
+ *            - TM_MPU6050_Result_Ok: everything is OK
+ *            - Other: in other cases
+ */
+MPU6050_Result_t TM_MPU6050_ReadGyroscope(MPU6050_t* DataStruct);
+
+/**
+ * @brief  Reads temperature data from sensor
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure to store data to
+ * @retval Member of @ref TM_MPU6050_Result_t:
+ *            - TM_MPU6050_Result_Ok: everything is OK
+ *            - Other: in other cases
+ */
+MPU6050_Result_t TM_MPU6050_ReadTemperature(MPU6050_t* DataStruct);
+
+/**
+ * @brief  Reads accelerometer, gyroscope and temperature data from sensor
+ * @param  *DataStruct: Pointer to @ref TM_MPU6050_t structure to store data to
+ * @retval Member of @ref TM_MPU6050_Result_t:
+ *            - TM_MPU6050_Result_Ok: everything is OK
+ *            - Other: in other cases
+ */
+MPU6050_Result_t MPU6050_ReadAll(MPU6050_t* DataStruct);

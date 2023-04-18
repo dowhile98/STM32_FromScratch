@@ -1,0 +1,10 @@
+22:00:32 **** Incremental Build of configuration Debug for project MPU650_LibDriver ****
+make -j8 all 
+arm-none-eabi-size   MPU650_LibDriver.elf 
+   text	   data	    bss	    dec	    hex	filename
+  54352	   3540	   2668	  60560	   ec90	MPU650_LibDriver.elf
+Finished building: default.size.stdout
+ 
+
+22:00:33 Build Finished. 0 errors, 0 warnings. (took 523ms)
+
