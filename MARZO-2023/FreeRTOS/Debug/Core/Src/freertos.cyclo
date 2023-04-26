@@ -1,0 +1,7 @@
+core_cm4.h:2064:26:ITM_SendChar	4
+freertos.c:72:6:vApplicationGetIdleTaskMemory	1
+freertos.c:86:6:MX_FREERTOS_Init	1
+freertos.c:133:6:StartDefaultTask	1
+freertos.c:151:6:task_led1	1
+freertos.c:171:6:task_led2	1
+freertos.c:186:5:__io_putchar	1

@@ -1,0 +1,7 @@
+../Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Core/Src/freertos.c:72:6:vApplicationGetIdleTaskMemory	24	static
+../Core/Src/freertos.c:86:6:MX_FREERTOS_Init	104	static
+../Core/Src/freertos.c:133:6:StartDefaultTask	16	static
+../Core/Src/freertos.c:151:6:task_led1	16	static
+../Core/Src/freertos.c:171:6:task_led2	16	static
+../Core/Src/freertos.c:186:5:__io_putchar	16	static
