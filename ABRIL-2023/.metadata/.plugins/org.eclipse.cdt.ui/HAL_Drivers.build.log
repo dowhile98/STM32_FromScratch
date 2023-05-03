@@ -1,0 +1,17 @@
+21:17:06 **** Incremental Build of configuration Debug for project HAL_Drivers ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DEXTERNAL_CLOCK_VALUE=12288000 -DHSI_VALUE=16000000 -DLSI_VALUE=32000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=1 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "HAL_Drivers.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\ABRIL-2023\HAL_Drivers\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="HAL_Drivers.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: HAL_Drivers.elf
+ 
+arm-none-eabi-size   HAL_Drivers.elf 
+arm-none-eabi-objdump -h -S  HAL_Drivers.elf  > "HAL_Drivers.list"
+   text	   data	    bss	    dec	    hex	filename
+   3020	     12	   1564	   4596	   11f4	HAL_Drivers.elf
+Finished building: default.size.stdout
+ 
+Finished building: HAL_Drivers.list
+ 
+
+21:17:09 Build Finished. 0 errors, 0 warnings. (took 2s.889ms)
+

@@ -1,0 +1,10 @@
+21:09:46 **** Incremental Build of configuration Debug for project HAL_Drivers_EXTI ****
+make -j8 all 
+arm-none-eabi-size   HAL_Drivers_EXTI.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11304	    120	   1592	  13016	   32d8	HAL_Drivers_EXTI.elf
+Finished building: default.size.stdout
+ 
+
+21:09:47 Build Finished. 0 errors, 0 warnings. (took 741ms)
+
