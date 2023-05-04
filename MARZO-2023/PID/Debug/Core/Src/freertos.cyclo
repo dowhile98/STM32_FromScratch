@@ -1,0 +1,5 @@
+freertos.c:76:6:vApplicationGetIdleTaskMemory	1
+freertos.c:90:6:MX_FREERTOS_Init	1
+freertos.c:155:13:StartDefaultTask	1
+freertos.c:173:13:Control_Task	1
+freertos.c:191:13:Labview_Task	1

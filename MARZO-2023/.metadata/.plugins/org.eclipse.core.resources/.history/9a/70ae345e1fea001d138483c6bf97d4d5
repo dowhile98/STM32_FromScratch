@@ -1,0 +1,62 @@
+/*
+ * App.c
+ *
+ *  Created on: May 3, 2023
+ *      Author: jeffr
+ */
+
+/*Includes ---------------------------------------------*/
+#include "main.h"
+#include "gpio.h"
+#include "usart.h"
+#include "tim.h"
+#include "cmsis_os.h"
+#include "PID.h"
+/*Defines -----------------------------------------------*/
+#define S					120				//cantidad de pulsos por vuelta
+#define Ts					10E-3			//tiempo de muestreo
+
+#define KP					0.0452
+#define KI					1.1202
+#define KD  				0.00046
+#define UMIN 				0
+#define UMAX				11.4
+
+/*Variables globales ------------------------------------*/
+
+/*Funciones privadas ------------------------------------*/
+
+void HAL_TIM_SampleCallback(TIM_HandleTypeDef *htim)
+{
+
+}
+/*Definicion de las tareas ------------------------------*/
+
+void StartDefaultTask(void const * argument){
+
+	/*Secuancia de inicio*/
+
+	for(;;){
+
+	}
+}
+void Control_Task(void const * argument){
+	/*Local variables -----------------------------------*/
+	float ref;
+	float rads;
+	float uc;
+	uint16_t duty;
+	PID_Def_t motor;
+	//secuencia de inicio
+	PID_Init(&MotorDC, KP, KI, KD, Ts, UMIN, UMAX);
+	//timer
+	HAL_TIM_RegisterCallback(&htim7, HAL_TIM_PERIOD_ELAPSED_CB_ID, pCallback)
+	for(;;){
+
+	}
+}
+void Labview_Task(void const * argument){
+	for(;;){
+
+	}
+}

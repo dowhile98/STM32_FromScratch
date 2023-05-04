@@ -1,0 +1,5 @@
+../Core/Src/freertos.c:76:6:vApplicationGetIdleTaskMemory	24	static
+../Core/Src/freertos.c:90:6:MX_FREERTOS_Init	152	static
+../Core/Src/freertos.c:155:13:StartDefaultTask	16	static
+../Core/Src/freertos.c:173:13:Control_Task	16	static
+../Core/Src/freertos.c:191:13:Labview_Task	16	static

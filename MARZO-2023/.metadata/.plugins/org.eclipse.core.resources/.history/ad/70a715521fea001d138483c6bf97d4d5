@@ -1,0 +1,48 @@
+/*
+ * App.c
+ *
+ *  Created on: May 3, 2023
+ *      Author: jeffr
+ */
+
+/*Includes ---------------------------------------------*/
+#include "main.h"
+#include "gpio.h"
+#include "usart.h"
+#include "tim.h"
+#include "cmsis_os.h"
+#include "PID.h"
+/*Defines -----------------------------------------------*/
+
+
+/*Variables globales ------------------------------------*/
+
+/*Funciones privadas ------------------------------------*/
+
+
+/*Definicion de las tareas ------------------------------*/
+
+void StartDefaultTask(void const * argument){
+
+	/*Secuancia de inicio*/
+
+	for(;;){
+
+	}
+}
+void Control_Task(void const * argument){
+	/*Local variables -----------------------------------*/
+	float ref;
+	float rads;
+	float uc;
+	uint16_t duty;
+	PID_Def_t motor;
+	for(;;){
+
+	}
+}
+void Labview_Task(void const * argument){
+	for(;;){
+
+	}
+}

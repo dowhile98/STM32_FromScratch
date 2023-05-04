@@ -1,0 +1,102 @@
+/*
+ * App.c
+ *
+ *  Created on: May 3, 2023
+ *      Author: jeffr
+ */
+
+/*Includes ---------------------------------------------*/
+#include "main.h"
+#include "gpio.h"
+#include "usart.h"
+#include "tim.h"
+#include "cmsis_os.h"
+#include "PID.h"
+#include <math.h>
+/*Defines -----------------------------------------------*/
+#define S					120				//cantidad de pulsos por vuelta
+#define Ts					10E-3			//tiempo de muestreo
+
+#define KP					0.0452
+#define KI					1.1202
+#define KD  				0.00046
+#define UMIN 				0
+#define UMAX				11.4
+
+/*Variables globales ------------------------------------*/
+extern osThreadId defaultTaskHandle;
+extern osThreadId ControlHandle;
+extern osThreadId LabviewHandle;
+extern osMessageQId RefHandle;
+extern osSemaphoreId ControlFlagHandle;
+extern osSemaphoreId ControlFlagHandle;
+uint8_t byte;
+extern osSemaphoreId DataRxHandle;
+/*Funciones privadas ------------------------------------*/
+
+void HAL_TIM_SampleCallback(TIM_HandleTypeDef *htim)
+{
+	osSemaphoreRelease(ControlFlagHandle);
+}
+/*Definicion de las tareas ------------------------------*/
+
+void StartDefaultTask(void const * argument){
+
+	/*Secuancia de inicio*/
+
+	for(;;){
+
+	}
+}
+void Control_Task(void const * argument){
+	/*Local variables -----------------------------------*/
+	float ref = 0;
+	float rads;
+	float rpm;
+	float uc;
+	uint16_t duty;
+	PID_Def_t motor;
+	uint32_t pulsos;
+	osEvent evt;
+	//secuencia de inicio
+	PID_Init(&MotorDC, KP, KI, KD, Ts, UMIN, UMAX);
+	//timer
+	HAL_TIM_RegisterCallback(&htim7, HAL_TIM_PERIOD_ELAPSED_CB_ID, HAL_TIM_SampleCallback);
+
+	for(;;){
+		//se espera una bandera
+		if(osSemaphoreWait(ControlFlagHandle, osWaitForever) == osOK){
+			//todo
+			pulsos = __HAL_TIM_GET_COUNTER(&htim2);	//se lee la cantidad de pulsos leidos en un segundo
+			__HAL_TIM_SET_COUNTER(&htim2, 0);
+			rpm = (float)pulsos * 60.0 / (Ts * S);
+			rads = rpm * (2 * M_PI) / 60;
+			//Filtro digital pasa bajo
+
+			//->referencia
+			evt = osMessageGet(RefHandle, 0);
+			if(evt.status == osEventMessage){
+				ref = *((float*)evt.value.p);
+			}
+			//->control
+			uc = PID_Compute(&motor, ref, rads); //voltaje
+
+			duty = (uint16_t)(uc * htim3.Instance->ARR / UMAX); //voltaje -> duty
+
+			__HAL_TIM_SET_COMPARE(&htim3, TIM_CHANNEL_1, duty);
+
+			//->dato a labview
+			osMessagePut(OutputHandle, (uint32_t)&rads, 5);
+		}
+	}
+}
+void Labview_Task(void const * argument){
+	uint8_t data[20];
+	uint8_t i = 0;
+	float ref;
+	HAL_UART_Receive_IT(&huart2, &byte, 1);
+	for(;;){
+		//se espera la bandera de recepcio de dato
+
+	}
+}
