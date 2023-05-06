@@ -1,0 +1,21 @@
+/*
+ * circularuart.c
+ *
+ *  Created on: May 5, 2023
+ *      Author: jeffr
+ */
+
+#include "circularuart.h"
+
+RBUART_State_t rbuart_init(RBUART_t *RB, USART_TypeDef *USARTX, void *buffData, size_t _size){
+	RB->USART = USARTX;
+	RB->size = _size;
+	if(lwrb_init(&RB->buff, buffData, size) == 1){
+		return RBUART_OK;
+	}
+	return RBUART_ERROR;
+}
+
+RBUART_Result_t rbuart_send(rbuart_t *rb, uint8_t *pData, size_t size){
+
+}

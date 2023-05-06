@@ -1,0 +1,8 @@
+circularuart.c:10:17:rbuart_init	2
+circularuart.c:19:17:rbuart_send	2
+circularuart.c:35:17:rbuart_start_receive	1
+circularuart.c:43:17:rbuart_stop_receive	1
+circularuart.c:54:8:rbuart_get_data	1
+circularuart.c:61:8:rbuart_get_receiveSize	1
+circularuart.c:69:17:rbuart_tx_callback	2
+circularuart.c:83:17:rbuart_rx_callback	2

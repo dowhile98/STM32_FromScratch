@@ -1,0 +1,6 @@
+../Lib/lwbtn/src/lwbtn/lwbtn.c:108:1:prv_process_btn	32	static
+../Lib/lwbtn/src/lwbtn/lwbtn.c:283:1:lwbtn_init_ex	32	static
+../Lib/lwbtn/src/lwbtn/lwbtn.c:342:1:lwbtn_process_ex	24	static
+../Lib/lwbtn/src/lwbtn/lwbtn.c:365:1:lwbtn_process_btn_ex	24	static
+../Lib/lwbtn/src/lwbtn/lwbtn.c:380:1:lwbtn_set_btn_state	16	static
+../Lib/lwbtn/src/lwbtn/lwbtn.c:401:1:lwbtn_is_btn_active	16	static

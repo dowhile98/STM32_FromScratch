@@ -1,0 +1,8 @@
+rbuart.c:21:17:rbuart_init	2
+rbuart.c:39:17:rbuart_tx_callback	2
+rbuart.c:66:17:rbuart_rx_callback	2
+rbuart.c:82:9:rbuart_send	5
+rbuart.c:108:17:rbuart_start_receive	1
+rbuart.c:119:17:rbuart_stop_receive	1
+rbuart.c:134:8:rbuart_get_data	1
+rbuart.c:141:8:rbuart_get_receiveSize	1

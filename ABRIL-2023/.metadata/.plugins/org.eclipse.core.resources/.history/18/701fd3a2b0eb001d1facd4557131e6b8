@@ -1,0 +1,34 @@
+/*
+ * circularuart.h
+ *
+ *  Created on: May 5, 2023
+ *      Author: jeffr
+ */
+
+#ifndef RING_BUFFER_UART_CIRCULARUART_H_
+#define RING_BUFFER_UART_CIRCULARUART_H_
+
+/*Includes ----------------------------------------------*/
+#include <main.h>
+
+/*Typedef -----------------------------------------------*/
+typedef enum{
+	RBUART_OK,
+	RBUART_ERROR,
+	RBUART_TXCPLT,
+	RBUART_RXCPLT
+}RBUART_State_t;
+
+typedef struct{
+	USART_TypeDef *USART;
+	lwrb_t		buff;
+	size_t		size;
+	uint8_t 	rawByte;
+	uint8_t 	txState;
+};
+/*Defines -----------------------------------------------*/
+
+/*Function prototype ------------------------------------*/
+
+
+#endif /* RING_BUFFER_UART_CIRCULARUART_H_ */

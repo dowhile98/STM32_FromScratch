@@ -1,0 +1,3 @@
+App.c:21:6:app_init	1
+App.c:30:6:HAL_UART_TxCpltCallback	1
+App.c:35:6:HAL_UART_RxCpltCallback	1

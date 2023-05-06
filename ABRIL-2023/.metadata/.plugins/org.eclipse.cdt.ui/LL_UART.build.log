@@ -1,0 +1,10 @@
+21:39:52 **** Incremental Build of configuration Debug for project LL_UART ****
+make -j8 all 
+arm-none-eabi-size   LL_UART.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12572	    120	   1784	  14476	   388c	LL_UART.elf
+Finished building: default.size.stdout
+ 
+
+21:39:53 Build Finished. 0 errors, 0 warnings. (took 871ms)
+

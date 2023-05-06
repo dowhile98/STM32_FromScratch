@@ -1,0 +1,14 @@
+../Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Core/Src/main.c:97:1:lwprintf_my_out_func	24	static
+../Core/Src/main.c:108:1:my_buff_evt_fn	24	static
+../Core/Src/main.c:123:9:read_serial	32	static
+../Core/Src/main.c:135:9:write_serial	24	static
+../Core/Src/main.c:147:12:handle_read_coils	32	static
+../Core/Src/main.c:160:12:handle_write_multiple_coils	32	static
+../Core/Src/main.c:172:12:handler_read_holding_registers	32	static
+../Core/Src/main.c:184:12:handle_write_multiple_registers	32	static
+../Core/Src/main.c:206:5:main	424	static
+../Core/Src/main.c:279:6:SystemClock_Config	88	static
+../Core/Src/main.c:317:16:prv_btn_get_state	32	static
+../Core/Src/main.c:330:13:prv_btn_event	32	static
+../Core/Src/main.c:363:6:Error_Handler	4	static,ignoring_inline_asm

@@ -1,0 +1,14 @@
+core_cm4.h:2064:26:ITM_SendChar	4
+main.c:97:1:lwprintf_my_out_func	2
+main.c:108:1:my_buff_evt_fn	5
+main.c:123:9:read_serial	3
+main.c:135:9:write_serial	1
+main.c:147:12:handle_read_coils	8
+main.c:160:12:handle_write_multiple_coils	8
+main.c:172:12:handler_read_holding_registers	3
+main.c:184:12:handle_write_multiple_registers	3
+main.c:206:5:main	3
+main.c:279:6:SystemClock_Config	3
+main.c:317:16:prv_btn_get_state	3
+main.c:330:13:prv_btn_event	6
+main.c:363:6:Error_Handler	1
