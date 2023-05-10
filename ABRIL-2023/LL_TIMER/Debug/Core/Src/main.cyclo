@@ -1,0 +1,5 @@
+main.c:69:13:prv_btn_event	4
+main.c:93:5:main	1
+main.c:143:6:SystemClock_Config	3
+main.c:181:16:prv_btn_get_state	3
+main.c:201:6:Error_Handler	1

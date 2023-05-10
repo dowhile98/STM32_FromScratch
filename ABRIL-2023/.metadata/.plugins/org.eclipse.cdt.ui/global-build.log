@@ -1,21 +1,21 @@
-21:39:46 **** Incremental Build of configuration Debug for project LL_UART ****
+22:18:52 **** Incremental Build of configuration Debug for project LL_TIMER ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_FULL_LL_DRIVER -c -I../Core/Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/LL_UART/LIb/ring_buffer_uart" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/LL_UART/LIb/lwrb/src/include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/LL_UART/LIb/lwrb/src/include/lwrb" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "LL_UART.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\ABRIL-2023\LL_UART\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LL_UART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: LL_UART.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_FULL_LL_DRIVER -c -I../Core/Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/LL_TIMER/Lib/lwbtn/src/include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/LL_TIMER/Lib/lwbtn/src/include/lwbtn" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LL_TIMER.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\ABRIL-2023\LL_TIMER\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LL_TIMER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LL_TIMER.elf
  
-arm-none-eabi-size   LL_UART.elf 
-arm-none-eabi-objdump -h -S  LL_UART.elf  > "LL_UART.list"
+arm-none-eabi-size   LL_TIMER.elf 
+arm-none-eabi-objdump -h -S  LL_TIMER.elf  > "LL_TIMER.list"
    text	   data	    bss	    dec	    hex	filename
-  12572	    120	   1784	  14476	   388c	LL_UART.elf
+   7640	     84	   1588	   9312	   2460	LL_TIMER.elf
 Finished building: default.size.stdout
  
-Finished building: LL_UART.list
+Finished building: LL_TIMER.list
  
-21:39:52 **** Incremental Build of configuration Debug for project LL_UART ****
+22:18:57 **** Incremental Build of configuration Debug for project LL_TIMER ****
 make -j8 all 
-arm-none-eabi-size   LL_UART.elf 
+arm-none-eabi-size   LL_TIMER.elf 
    text	   data	    bss	    dec	    hex	filename
-  12572	    120	   1784	  14476	   388c	LL_UART.elf
+   7640	     84	   1588	   9312	   2460	LL_TIMER.elf
 Finished building: default.size.stdout
  

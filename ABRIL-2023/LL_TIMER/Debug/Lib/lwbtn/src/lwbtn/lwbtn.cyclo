@@ -1,0 +1,6 @@
+lwbtn.c:108:1:prv_process_btn	16
+lwbtn.c:283:1:lwbtn_init_ex	7
+lwbtn.c:342:1:lwbtn_process_ex	3
+lwbtn.c:365:1:lwbtn_process_btn_ex	3
+lwbtn.c:380:1:lwbtn_set_btn_state	1
+lwbtn.c:401:1:lwbtn_is_btn_active	3
