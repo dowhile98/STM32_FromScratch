@@ -1,0 +1,10 @@
+22:04:07 **** Incremental Build of configuration Debug for project HAL_Driver_TIMER_IC ****
+make -j8 all 
+arm-none-eabi-size   HAL_Driver_TIMER_IC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  14876	    120	   1776	  16772	   4184	HAL_Driver_TIMER_IC.elf
+Finished building: default.size.stdout
+ 
+
+22:04:11 Build Finished. 0 errors, 0 warnings. (took 4s.15ms)
+
