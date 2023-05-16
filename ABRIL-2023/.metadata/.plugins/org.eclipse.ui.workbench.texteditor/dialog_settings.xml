@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="lwbtn_process_ex"/>
+		<item key="selection" value="CCER"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="ccer"/>
+			<item value="CCR"/>
+			<item value="hal_tim_ic_ca"/>
 			<item value="lwbtn_process_ex"/>
 			<item value="LL_TIM_SR_UIF"/>
 			<item value="SR"/>
