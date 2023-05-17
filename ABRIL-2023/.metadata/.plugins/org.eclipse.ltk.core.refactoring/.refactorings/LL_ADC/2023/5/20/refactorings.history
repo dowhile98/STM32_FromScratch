@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LL_ADC/HAL_Drivers_ADC.ioc&apos; to &apos;LL_ADC.ioc&apos;" description="Rename resource &apos;HAL_Drivers_ADC.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="HAL_Drivers_ADC.ioc" name="LL_ADC.ioc" stamp="1684292555062" updateReferences="true"/>
+</session>

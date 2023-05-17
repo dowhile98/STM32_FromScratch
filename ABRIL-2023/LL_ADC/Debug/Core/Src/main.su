@@ -1,0 +1,9 @@
+../Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h:3867:22:LL_ADC_Enable	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h:3918:22:LL_ADC_REG_StartConversionSWStart	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h:3986:26:LL_ADC_REG_ReadConversionData12	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_adc.h:4287:26:LL_ADC_IsActiveFlag_EOCS	16	static
+../Core/Src/main.c:54:5:__io_putchar	16	static
+../Core/Src/main.c:71:5:main	8	static
+../Core/Src/main.c:126:6:SystemClock_Config	88	static
+../Core/Src/main.c:175:6:Error_Handler	4	static,ignoring_inline_asm

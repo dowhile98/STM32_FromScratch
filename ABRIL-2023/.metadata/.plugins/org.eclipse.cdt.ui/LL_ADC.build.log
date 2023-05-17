@@ -1,0 +1,10 @@
+22:17:01 **** Incremental Build of configuration Debug for project LL_ADC ****
+make -j8 all 
+arm-none-eabi-size   LL_ADC.elf 
+   text	   data	    bss	    dec	    hex	filename
+  11944	    120	   1592	  13656	   3558	LL_ADC.elf
+Finished building: default.size.stdout
+ 
+
+22:17:01 Build Finished. 0 errors, 0 warnings. (took 793ms)
+
