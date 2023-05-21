@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;STM32_STM32L412KB/Drivers/CMSIS/Device/ST/STM32L4xx/Source&apos;" deleteContents="false" description="Delete resource &apos;STM32_STM32L412KB/Drivers/CMSIS/Device/ST/STM32L4xx/Source&apos;" element1="/STM32_STM32L412KB/Drivers/CMSIS/Device/ST/STM32L4xx/Source" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1684632263141"/>
+</session>

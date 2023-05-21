@@ -1,0 +1,7 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/STM32_STM32L412KB/Drivers/CMSIS/Include/core_cm4.h:1809:22:__NVIC_SetPriority	16	static
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/STM32_STM32L412KB/Drivers/CMSIS/Include/core_cm4.h:2017:26:SysTick_Config	16	static
+../Inc/SystemTime.h:21:22:System_Tick_Init	16	static
+../Inc/SystemTime.h:26:26:System_getTicks	4	static
+../Inc/SystemTime.h:34:22:delay_ms	24	static
+../Src/main.c:34:6:adc1_read_ch567	16	static
+../Src/main.c:45:5:main	8	static

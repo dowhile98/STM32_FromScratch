@@ -1,0 +1,19 @@
+/*
+ * SystemTime.h
+ *
+ *  Created on: May 20, 2023
+ *      Author: jeffr
+ */
+
+#ifndef SYSTEMTIME_H_
+#define SYSTEMTIME_H_
+
+
+/*Includes -------------------------------------------------*/
+#include "stm32l412xx.h"
+
+/*Global variables -----------------------------------------*/
+static volatile uint32_t uwTicks = 0;
+
+
+#endif /* SYSTEMTIME_H_ */

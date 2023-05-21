@@ -1,0 +1,6 @@
+core_cm4.h:2064:26:ITM_SendChar	4
+main.c:69:5:__io_putchar	1
+main.c:84:5:main	2
+main.c:176:6:SystemClock_Config	3
+main.c:218:6:HAL_ADC_ConvCpltCallback	1
+main.c:228:6:Error_Handler	1

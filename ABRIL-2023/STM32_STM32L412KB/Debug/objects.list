@@ -1,0 +1,6 @@
+"./Src/main.o"
+"./Src/stm32l4xx_it.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Src/system_stm32l4xx.o"
+"./Startup/startup_stm32l412kbux.o"
