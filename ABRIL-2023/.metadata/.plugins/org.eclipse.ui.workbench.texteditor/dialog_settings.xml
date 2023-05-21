@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="FPU_PRESENT"/>
+		<item key="selection" value="ADC"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="adc"/>
+			<item value="ad"/>
+			<item value="stm32l412"/>
+			<item value="stm32l412kb"/>
 			<item value="FPU_PRESENT"/>
 			<item value="SWST"/>
 			<item value="SWRT"/>
@@ -19,9 +23,6 @@
 			<item value="SR"/>
 			<item value="REGITER"/>
 			<item value="GPIOA_BASE"/>
-			<item value="GPIOA"/>
-			<item value="GPIO"/>
-			<item value="stm32f407vg"/>
 		</list>
 		<list key="replacehistory">
 		</list>
