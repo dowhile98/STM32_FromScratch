@@ -1,21 +1,21 @@
-21:41:42 **** Incremental Build of configuration Debug for project STM32_STM32L412KB ****
+22:17:48 **** Incremental Build of configuration Debug for project LL_SPI ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32L412xx -DSTM32L412KBUx -DSTM32L4 -DSTM32 -DNUCLEO_L412KB -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/STM32_STM32L412KB/Drivers/CMSIS/Device/ST/STM32L4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/STM32_STM32L412KB/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "STM32_STM32L412KB.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\ABRIL-2023\STM32_STM32L412KB\STM32L412KBUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="STM32_STM32L412KB.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: STM32_STM32L412KB.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "LL_SPI.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\ABRIL-2023\LL_SPI\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="LL_SPI.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: LL_SPI.elf
  
-arm-none-eabi-size   STM32_STM32L412KB.elf 
-arm-none-eabi-objdump -h -S  STM32_STM32L412KB.elf  > "STM32_STM32L412KB.list"
+arm-none-eabi-size   LL_SPI.elf 
+arm-none-eabi-objdump -h -S  LL_SPI.elf  > "LL_SPI.list"
    text	   data	    bss	    dec	    hex	filename
-   1432	      8	   1576	   3016	    bc8	STM32_STM32L412KB.elf
+   6780	     20	   1572	   8372	   20b4	LL_SPI.elf
 Finished building: default.size.stdout
  
-Finished building: STM32_STM32L412KB.list
+Finished building: LL_SPI.list
  
-21:41:52 **** Incremental Build of configuration Debug for project STM32_STM32L412KB ****
+22:17:58 **** Incremental Build of configuration Debug for project LL_SPI ****
 make -j8 all 
-arm-none-eabi-size   STM32_STM32L412KB.elf 
+arm-none-eabi-size   LL_SPI.elf 
    text	   data	    bss	    dec	    hex	filename
-   1432	      8	   1576	   3016	    bc8	STM32_STM32L412KB.elf
+   6780	     20	   1572	   8372	   20b4	LL_SPI.elf
 Finished building: default.size.stdout
  

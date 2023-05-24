@@ -33,11 +33,11 @@ uint16_t data[3];
 /*Function prototype --------------------------------------------------*/
 void adc1_read_ch567(uint16_t *pdata){
 	ADC1->CR |= ADC_CR_ADSTART;
-	while(!(ADC_ISR_EOC));
+	while(!(ADC1->ISR & ADC_ISR_EOC));
 	pdata[0] = ADC1->DR;
-	while(!(ADC_ISR_EOC));
+	while(!(ADC1->ISR & ADC_ISR_EOC));
 	pdata[1] = ADC1->DR;
-	while(!(ADC_ISR_EOC));
+	while(!(ADC1->ISR & ADC_ISR_EOC));
 	pdata[2] = ADC1->DR;
 	return;
 }

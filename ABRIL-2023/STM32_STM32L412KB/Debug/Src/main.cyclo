@@ -3,5 +3,5 @@ core_cm4.h:2017:26:SysTick_Config	2
 SystemTime.h:21:22:System_Tick_Init	1
 SystemTime.h:26:26:System_getTicks	1
 SystemTime.h:34:22:delay_ms	2
-main.c:34:6:adc1_read_ch567	1
+main.c:34:6:adc1_read_ch567	4
 main.c:45:5:main	3

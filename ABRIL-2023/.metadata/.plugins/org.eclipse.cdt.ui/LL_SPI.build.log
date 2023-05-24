@@ -1,0 +1,10 @@
+22:17:58 **** Incremental Build of configuration Debug for project LL_SPI ****
+make -j8 all 
+arm-none-eabi-size   LL_SPI.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6780	     20	   1572	   8372	   20b4	LL_SPI.elf
+Finished building: default.size.stdout
+ 
+
+22:17:59 Build Finished. 0 errors, 0 warnings. (took 944ms)
+
