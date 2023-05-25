@@ -147,7 +147,6 @@ int main(void)
   uint8_t test[4] = {0x1f, 0x2a, 0x3b, 0x45};
 
   SPI_SendData(SPI1, test, 4);
-
   SPI_ReceiveData(SPI1, test, 4);
   /* USER CODE END 2 */
 

@@ -18,12 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "adc.h"
+#include "spi.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -44,24 +44,72 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-uint16_t in1;
-uint8_t convready= 0;
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(void);
 /* USER CODE BEGIN PFP */
-int __io_putchar(int ch){
-	ITM_SendChar(ch);
-	return ch;
-}
-
 
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+void SPI_SendData(SPI_TypeDef *SPI, uint8_t *pData, size_t len){
+	uint16_t temp;
+	while(len>0){
+		//verificar la bandera TXE
+		//while(!(SPI->SR & SPI_SR_TXE));
+		while(!LL_SPI_IsActiveFlag_TXE(SPI));
 
+		//send
+		if(READ_BIT(SPI->CR1, SPI_CR1_DFF)/*SPI->CR1 & SPI_CR1_DFF*/){//SET 16BIT DE DATOS
+			//SPI->DR = *((uint16_t *)pData);
+			LL_SPI_TransmitData16(SPI, *((uint16_t *)pData));
+			pData += 2;
+			len -=2;
+			while(!(LL_SPI_IsActiveFlag_RXNE(SPI)));
+			temp = SPI->DR;
+		}else{
+			LL_SPI_TransmitData8(SPI, *pData);
+			len -= 1;
+			pData++;
+			while(!(LL_SPI_IsActiveFlag_RXNE(SPI)));
+			temp = SPI->DR;
+		}
+	}
+	(void)temp;
+	while(LL_SPI_IsActiveFlag_BSY(SPI));
+}
+
+void SPI_ReceiveData(SPI_TypeDef *SPI, uint8_t *pData, size_t len){
+	uint16_t temp = 0xFFFF;
+	while(len>0){
+		//verificar la bandera TXE
+		//while(!(SPI->SR & SPI_SR_TXE));
+		while(!LL_SPI_IsActiveFlag_TXE(SPI));
+
+		//send
+		if(READ_BIT(SPI->CR1, SPI_CR1_DFF)/*SPI->CR1 & SPI_CR1_DFF*/){//SET 16BIT DE DATOS
+			//SPI->DR = *((uint16_t *)pData);
+			LL_SPI_TransmitData16(SPI, temp);
+
+			while(!(LL_SPI_IsActiveFlag_RXNE(SPI)));
+			*((uint16_t*)pData) = SPI->DR;
+			pData += 2;
+			len -=2;
+		}else{
+			LL_SPI_TransmitData8(SPI, (uint8_t)temp );
+
+			while(!(LL_SPI_IsActiveFlag_RXNE(SPI)));
+			*pData = SPI->DR;
+			len -= 1;
+			pData++;
+		}
+	}
+	(void)temp;
+	while(LL_SPI_IsActiveFlag_BSY(SPI));
+}
 /* USER CODE END 0 */
 
 /**
@@ -92,10 +140,15 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
-  MX_ADC1_Init();
+  MX_SPI1_Init();
   /* USER CODE BEGIN 2 */
-  //ADC1->CR2 |= ADC_CR2_ADON;
-  LL_ADC_Enable(ADC1);
+  //SPI1->CR1 |= SPI_CR1_SPE;
+  LL_SPI_Enable(SPI1);
+  uint8_t test[4] = {0x1f, 0x2a, 0x3b, 0x45};
+
+  SPI_SendData(SPI1, test, 4);
+
+  SPI_ReceiveData(SPI1, test, 4);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -105,16 +158,6 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-	  //ADC1->CR2 |= ADC_CR2_SWSTART;
-	  LL_ADC_REG_StartConversionSWStart(ADC1);
-	  while(!LL_ADC_IsActiveFlag_EOCS(ADCx));
-
-	  HAL_Delay(100);
-	  if(convready == 1){
-		  convready  = 0;
-		  printf("IN1: %u\r\n", in1);
-	  }
-
   }
   /* USER CODE END 3 */
 }
