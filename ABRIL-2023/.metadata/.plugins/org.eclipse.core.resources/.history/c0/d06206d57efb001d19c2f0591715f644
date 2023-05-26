@@ -1,0 +1,3 @@
+MQTTUnsubscribeClient.c:28:5:MQTTSerialize_unsubscribeLength	2
+MQTTUnsubscribeClient.c:49:5:MQTTSerialize_unsubscribe	3
+MQTTUnsubscribeClient.c:92:5:MQTTDeserialize_unsuback	2

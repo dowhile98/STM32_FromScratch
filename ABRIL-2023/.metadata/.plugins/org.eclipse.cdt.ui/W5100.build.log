@@ -1,0 +1,10 @@
+23:41:47 **** Incremental Build of configuration Debug for project W5100 ****
+make -j8 all 
+arm-none-eabi-size   W5100.elf 
+   text	   data	    bss	    dec	    hex	filename
+  21240	    136	   5760	  27136	   6a00	W5100.elf
+Finished building: default.size.stdout
+ 
+
+23:41:49 Build Finished. 0 errors, 0 warnings. (took 1s.332ms)
+

@@ -1,0 +1,11 @@
+dns.c:126:10:get16	1
+dns.c:135:11:put16	1
+dns.c:153:5:parse_name	9
+dns.c:214:11:dns_question	2
+dns.c:240:11:dns_answer	11
+dns.c:335:8:parseDNSMSG	13
+dns.c:413:9:dns_makequery	4
+dns.c:474:8:check_DNS_timeout	3
+dns.c:494:6:DNS_init	1
+dns.c:502:8:DNS_run	5
+dns.c:561:6:DNS_time_handler	1

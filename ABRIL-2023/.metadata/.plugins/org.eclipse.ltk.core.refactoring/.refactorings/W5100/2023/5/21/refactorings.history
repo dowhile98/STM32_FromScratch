@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;W5100/LL_SPI.ioc&apos; to &apos;W5100.ioc&apos;" description="Rename resource &apos;LL_SPI.ioc&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="LL_SPI.ioc" name="W5100.ioc" stamp="1685068031803" updateReferences="true"/>
+</session>

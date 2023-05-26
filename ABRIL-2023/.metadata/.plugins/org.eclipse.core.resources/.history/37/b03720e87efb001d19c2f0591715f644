@@ -1,0 +1,13 @@
+stm32f4xx_ll_spi.h:731:26:LL_SPI_IsActiveFlag_RXNE	2
+stm32f4xx_ll_spi.h:742:26:LL_SPI_IsActiveFlag_TXE	2
+stm32f4xx_ll_spi.h:1075:25:LL_SPI_ReceiveData8	1
+stm32f4xx_ll_spi.h:1098:22:LL_SPI_TransmitData8	1
+W5100_ll_driver.c:30:9:w5100_read_byte	3
+W5100_ll_driver.c:43:6:w5100_write_byte	3
+W5100_ll_driver.c:54:6:w5100_cs_enable	1
+W5100_ll_driver.c:62:6:w5100_cs_disable	1
+W5100_ll_driver.c:69:6:w5100_reset_assert	1
+W5100_ll_driver.c:76:6:w5100_reset_deassert	1
+W5100_ll_driver.c:83:6:w5100_reset	1
+W5100_ll_driver.c:93:6:w5100_critical_enter	1
+W5100_ll_driver.c:100:6:w5100_critical_exit	1

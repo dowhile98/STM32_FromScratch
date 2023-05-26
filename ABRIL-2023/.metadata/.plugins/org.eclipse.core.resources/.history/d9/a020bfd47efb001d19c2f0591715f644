@@ -1,0 +1,4 @@
+httpUtil.c:17:9:http_get_cgi_handler	4
+httpUtil.c:41:9:http_post_cgi_handler	4
+httpUtil.c:67:9:predefined_get_cgi_processor	1
+httpUtil.c:72:9:predefined_set_cgi_processor	1

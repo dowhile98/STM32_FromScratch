@@ -1,0 +1,6 @@
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_spi.h:297:22:LL_SPI_Enable	16	static
+../Core/Src/main.c:90:5:main	24	static
+../Core/Src/main.c:166:6:SystemClock_Config	88	static
+../Core/Src/main.c:208:6:W5100_Initialize	24	static
+../Core/Src/main.c:228:5:proccess_dhcp	16	static
+../Core/Src/main.c:262:6:Error_Handler	4	static,ignoring_inline_asm

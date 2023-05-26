@@ -1,0 +1,9 @@
+netutil.c:12:9:inet_ntoa	1
+netutil.c:27:9:inet_ntoa_pad	1
+netutil.c:41:10:inet_addr	4
+netutil.c:69:10:swaps	1
+netutil.c:83:10:swapl	1
+netutil.c:99:10:htons	1
+netutil.c:115:10:htonl	1
+netutil.c:132:10:ntohs	1
+netutil.c:148:10:ntohl	1
