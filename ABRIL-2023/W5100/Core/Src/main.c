@@ -123,6 +123,7 @@ int main(void)
 
   //reset
   w5100_reset();
+  HAL_Delay(3000);
   W5100_Initialize();
 
   wizchip_setnetinfo(&gWIZNETINFO);
