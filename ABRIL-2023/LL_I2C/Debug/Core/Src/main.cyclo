@@ -1,0 +1,13 @@
+stm32f4xx_ll_i2c.h:1236:26:LL_I2C_IsActiveFlag_TXE	1
+stm32f4xx_ll_i2c.h:1249:26:LL_I2C_IsActiveFlag_BTF	1
+stm32f4xx_ll_i2c.h:1262:26:LL_I2C_IsActiveFlag_RXNE	1
+stm32f4xx_ll_i2c.h:1275:26:LL_I2C_IsActiveFlag_SB	1
+stm32f4xx_ll_i2c.h:1288:26:LL_I2C_IsActiveFlag_ADDR	1
+stm32f4xx_ll_i2c.h:1418:26:LL_I2C_IsActiveFlag_BUSY	1
+stm32f4xx_ll_i2c.h:1835:25:LL_I2C_ReceiveData8	1
+stm32f4xx_ll_i2c.h:1847:22:LL_I2C_TransmitData8	1
+main.c:64:9:i2c_reg_write	18
+main.c:145:9:i2c_reg_read	24
+main.c:272:5:main	1
+main.c:324:6:SystemClock_Config	3
+main.c:369:6:Error_Handler	1

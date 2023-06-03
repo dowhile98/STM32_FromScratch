@@ -1,0 +1,4 @@
+driver_mpu6050_basic.c:49:9:mpu6050_basic_init	44
+driver_mpu6050_basic.c:505:9:mpu6050_basic_read_temperature	2
+driver_mpu6050_basic.c:527:9:mpu6050_basic_read	2
+driver_mpu6050_basic.c:566:9:mpu6050_basic_deinit	2

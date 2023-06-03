@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;LL_I2C/Core/Src/driver_mpu6050_interface_template.c&apos; to &apos;driver_mpu6050_interface_stm32.c&apos;" description="Rename resource &apos;driver_mpu6050_interface_template.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Core/Src/driver_mpu6050_interface_template.c" name="driver_mpu6050_interface_stm32.c" stamp="1685500961509" updateReferences="true"/>
+</session>

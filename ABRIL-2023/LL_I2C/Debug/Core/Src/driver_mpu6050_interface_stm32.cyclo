@@ -1,0 +1,9 @@
+driver_mpu6050_interface_stm32.c:49:9:mpu6050_interface_iic_init	1
+driver_mpu6050_interface_stm32.c:62:9:mpu6050_interface_iic_deinit	1
+driver_mpu6050_interface_stm32.c:79:9:mpu6050_interface_iic_read	1
+driver_mpu6050_interface_stm32.c:96:9:mpu6050_interface_iic_write	1
+driver_mpu6050_interface_stm32.c:106:6:mpu6050_interface_delay_ms	1
+driver_mpu6050_interface_stm32.c:117:6:mpu6050_interface_debug_print	1
+driver_mpu6050_interface_stm32.c:127:6:mpu6050_interface_receive_callback	6
+driver_mpu6050_interface_stm32.c:176:6:mpu6050_interface_dmp_tap_callback	7
+driver_mpu6050_interface_stm32.c:230:6:mpu6050_interface_dmp_orient_callback	5
