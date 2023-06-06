@@ -1,0 +1,27 @@
+22:43:55 **** Incremental Build of configuration Debug for project ESP8266_AT ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/ESP8266_AT/Lib/ESP8266" -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'ESP8266_Callback_ClientConnectionConnected':
+../Core/Src/main.c:178:30: warning: passing argument 1 of 'ESP8266_CloseAllConnections' from incompatible pointer type [-Wincompatible-pointer-types]
+  178 |  ESP8266_CloseAllConnections(&ESP8266);
+      |                              ^~~~~~~~
+      |                              |
+      |                              ESP8266_t **
+In file included from ../Core/Src/main.c:27:
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ABRIL-2023/ESP8266_AT/Lib/ESP8266/esp8266.h:766:57: note: expected 'ESP8266_t *' but argument is of type 'ESP8266_t **'
+  766 | ESP8266_Result_t ESP8266_CloseAllConnections(ESP8266_t* ESP8266);
+      |                                              ~~~~~~~~~~~^~~~~~~
+arm-none-eabi-gcc -o "ESP8266_AT.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\ABRIL-2023\ESP8266_AT\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ESP8266_AT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ESP8266_AT.elf
+ 
+arm-none-eabi-size   ESP8266_AT.elf 
+arm-none-eabi-objdump -h -S  ESP8266_AT.elf  > "ESP8266_AT.list"
+   text	   data	    bss	    dec	    hex	filename
+  46804	    140	  29084	  76028	  128fc	ESP8266_AT.elf
+Finished building: default.size.stdout
+ 
+Finished building: ESP8266_AT.list
+ 
+
+22:43:58 Build Finished. 0 errors, 1 warnings. (took 2s.866ms)
+

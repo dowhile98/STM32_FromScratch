@@ -1,0 +1,14 @@
+buffer.c:28:9:BUFFER_Init	4
+buffer.c:52:6:BUFFER_Free	3
+buffer.c:63:10:BUFFER_Write	9
+buffer.c:114:10:BUFFER_WriteToTop	9
+buffer.c:147:10:BUFFER_Read	9
+buffer.c:195:10:BUFFER_GetFree	5
+buffer.c:215:10:BUFFER_GetFull	5
+buffer.c:235:10:BUFFER_GetFullFast	2
+buffer.c:246:6:BUFFER_Reset	2
+buffer.c:254:9:BUFFER_FindElement	5
+buffer.c:277:9:BUFFER_Find	12
+buffer.c:318:10:BUFFER_WriteString	1
+buffer.c:322:10:BUFFER_ReadString	9
+buffer.c:357:8:BUFFER_CheckElement	6

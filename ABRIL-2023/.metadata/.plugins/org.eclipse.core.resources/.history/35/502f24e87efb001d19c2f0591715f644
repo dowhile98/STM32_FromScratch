@@ -1,4 +1,0 @@
-stm32f4xx_ll_spi.h:365:22:LL_SPI_SetStandard	1
-stm32f4xx_ll_bus.h:409:22:LL_AHB1_GRP1_EnableClock	1
-stm32f4xx_ll_bus.h:1704:22:LL_APB2_GRP1_EnableClock	1
-spi.c:28:6:MX_SPI1_Init	1

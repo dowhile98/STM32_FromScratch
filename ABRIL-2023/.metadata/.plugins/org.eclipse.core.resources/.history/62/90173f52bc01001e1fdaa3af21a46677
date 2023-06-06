@@ -1,0 +1,39 @@
+/*
+ * WiFi_Task.c
+ *
+ *  Created on: Jun 2, 2023
+ *      Author: jeffr
+ */
+#include "cmsis_os2.h"
+#include "main.h"
+#include "esp8266.h"
+#include "gpio.h"
+
+/***************************************************************/
+ESP8266_t ESP8266;
+ESP8266_APConfig_t ESP8266_config;
+ESP8266_Connection_t *ConnectionGlobal;
+
+/**************************************************************/
+
+void WiFi_Task(void *argument)
+{
+	ESP8266_Result_t result;
+  /* USER CODE BEGIN WiFi_Task */
+
+	do{
+		result = ESP8266_Init(&ESP8266, 115200);
+		osDelay(100);
+	}while(result != ESP_OK);
+
+	do{
+		result  = ESP8266_SetMode(&ESP8266, ESP8266_Mode_STA);
+		osDelay(20);
+	}while(result != ESP_OK);
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END WiFi_Task */
+}

@@ -1,0 +1,7 @@
+../Core/Src/main.c:68:5:main	8	static
+../Core/Src/main.c:120:6:SystemClock_Config	88	static
+../Core/Src/main.c:159:6:Led_Task	24	static
+../Core/Src/main.c:173:6:ESP8266_Callback_ClientConnectionConnected	16	static
+../Core/Src/main.c:181:6:ESP8266_Callback_ClientConnectionError	16	static
+../Core/Src/main.c:197:6:HAL_TIM_PeriodElapsedCallback	16	static
+../Core/Src/main.c:214:6:Error_Handler	4	static,ignoring_inline_asm

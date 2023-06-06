@@ -1,0 +1,7 @@
+[
+{
+  "directory": "D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/HelloWorld/build",
+  "command": "C:\\MinGW\\bin\\gcc.exe   -g -o CMakeFiles\\HelloWorld.dir\\main.c.obj -c \"D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\JUNIO-2023\\HelloWorld\\main.c\"",
+  "file": "D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/HelloWorld/main.c"
+}
+]

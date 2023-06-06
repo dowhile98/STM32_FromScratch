@@ -1,0 +1,12 @@
+core_cm4.h:2064:26:ITM_SendChar	4
+WiFi_Task.c:14:5:__io_putchar	1
+WiFi_Task.c:25:6:WiFi_Task	4
+WiFi_Task.c:77:6:ESP8266_Callback_DeviceReady	1
+WiFi_Task.c:82:6:ESP8266_Callback_WatchdogReset	1
+WiFi_Task.c:87:6:ESP8266_Callback_WifiDisconnected	1
+WiFi_Task.c:91:6:ESP8266_Callback_WifiConnected	1
+WiFi_Task.c:95:6:ESP8266_Callback_WifiConnectFailed	1
+WiFi_Task.c:102:6:ESP8266_Callback_WifiGotIP	1
+WiFi_Task.c:111:6:ESP8266_Callback_WifiIPSet	1
+WiFi_Task.c:118:6:ESP8266_Callback_DHCPTimeout	1
+WiFi_Task.c:122:6:ESP8266_Callback_WifiDetected	2

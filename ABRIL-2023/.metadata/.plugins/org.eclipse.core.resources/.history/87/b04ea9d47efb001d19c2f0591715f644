@@ -1,6 +1,0 @@
-../Lib/ioLibrary_Driver/Internet/FTPServer/ftpd.c:119:5:fsprintf	20	static
-../Lib/ioLibrary_Driver/Internet/FTPServer/ftpd.c:140:6:ftpd_init	24	static
-../Lib/ioLibrary_Driver/Internet/FTPServer/ftpd.c:174:9:ftpd_run	40	static
-../Lib/ioLibrary_Driver/Internet/FTPServer/ftpd.c:762:6:proc_ftpd	280	static
-../Lib/ioLibrary_Driver/Internet/FTPServer/ftpd.c:1159:6:ftplogin	120	static
-../Lib/ioLibrary_Driver/Internet/FTPServer/ftpd.c:1177:5:pport	40	static

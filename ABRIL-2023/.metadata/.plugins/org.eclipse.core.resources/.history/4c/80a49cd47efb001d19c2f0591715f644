@@ -1,5 +1,0 @@
-ftpc.c:20:6:ftpc_init	1
-ftpc.c:32:9:ftpc_run	1
-ftpc.c:468:6:proc_ftpc	19
-ftpc.c:547:5:pportc	6
-ftpc.c:575:10:User_Keyboard_MSG	2

@@ -1,0 +1,3 @@
+../Core/Src/freertos.c:80:6:MX_FREERTOS_Init	8	static
+../Core/Src/freertos.c:125:13:WiFi_Task	16	static
+../Core/Src/freertos.c:143:13:Led_Task	16	static

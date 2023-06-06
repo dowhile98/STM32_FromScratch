@@ -1,6 +1,0 @@
-ftpd.c:119:5:fsprintf	1
-ftpd.c:140:6:ftpd_init	3
-ftpd.c:174:9:ftpd_run	61
-ftpd.c:762:6:proc_ftpd	49
-ftpd.c:1159:6:ftplogin	1
-ftpd.c:1177:5:pport	6

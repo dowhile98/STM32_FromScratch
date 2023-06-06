@@ -1,0 +1,14 @@
+../Lib/ESP8266/buffer.c:28:9:BUFFER_Init	24	static
+../Lib/ESP8266/buffer.c:52:6:BUFFER_Free	16	static
+../Lib/ESP8266/buffer.c:63:10:BUFFER_Write	40	static
+../Lib/ESP8266/buffer.c:114:10:BUFFER_WriteToTop	32	static
+../Lib/ESP8266/buffer.c:147:10:BUFFER_Read	40	static
+../Lib/ESP8266/buffer.c:195:10:BUFFER_GetFree	32	static
+../Lib/ESP8266/buffer.c:215:10:BUFFER_GetFull	32	static
+../Lib/ESP8266/buffer.c:235:10:BUFFER_GetFullFast	24	static
+../Lib/ESP8266/buffer.c:246:6:BUFFER_Reset	16	static
+../Lib/ESP8266/buffer.c:254:9:BUFFER_FindElement	32	static
+../Lib/ESP8266/buffer.c:277:9:BUFFER_Find	48	static
+../Lib/ESP8266/buffer.c:318:10:BUFFER_WriteString	16	static
+../Lib/ESP8266/buffer.c:322:10:BUFFER_ReadString	40	static
+../Lib/ESP8266/buffer.c:357:8:BUFFER_CheckElement	40	static
