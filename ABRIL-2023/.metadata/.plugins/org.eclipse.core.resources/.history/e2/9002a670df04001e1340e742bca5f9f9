@@ -1,0 +1,60 @@
+/*
+ * dma_rb_test.c
+ *
+ *  Created on: Jun 6, 2023
+ *      Author: jeffr
+ */
+
+
+#include "main.h"
+#include "usart.h"
+#include "dma.h"
+#include <string.h>
+#include <lwrb.h>
+#include <cmsis_os.h>
+//lwrb_t buff;
+//uint8_t buff_data[64];
+//size_t len;
+//uint8_t *pData;
+//
+//
+//
+//uint8_t rb_send_dma(uint8_t *data, uint8_t len){
+//
+//
+//	lwrb_write(&buff, data, len);
+//	HAL_StatusTypeDef status = HAL_OK;
+//	//iniciar la transferencia dma
+//	if((len = lwrb_get_linear_block_read_length(&buff))>0){
+//		pData = lwrb_get_linear_block_read_address(&buff);
+//		status = HAL_UART_Transmit_DMA(&huart1, pData, len);
+//	}
+//	return status;
+//}
+
+
+
+
+void HMI_Task(void const * argument)
+{
+
+  /* USER CODE BEGIN HMI_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+
+	  osDelay(100);
+  }
+  /* USER CODE END HMI_Task */
+}
+
+//void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+//{
+//	uint8_t *data;
+//	lwrb_skip(&buff, len);
+//
+//	if((len = lwrb_get_linear_block_read_length(&buff))>0){
+//		data = lwrb_get_linear_block_read_address(&buff);
+//		HAL_UART_Transmit_DMA(&huart1, data, len);
+//	}
+//}

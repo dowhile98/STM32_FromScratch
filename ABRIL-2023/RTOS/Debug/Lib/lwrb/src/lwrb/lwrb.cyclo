@@ -1,0 +1,17 @@
+lwrb.c:70:1:lwrb_init	4
+lwrb.c:89:1:lwrb_is_ready	4
+lwrb.c:100:1:lwrb_free	4
+lwrb.c:112:1:lwrb_set_evt_fn	4
+lwrb.c:130:1:lwrb_write	10
+lwrb.c:183:1:lwrb_read	10
+lwrb.c:235:1:lwrb_peek	10
+lwrb.c:282:1:lwrb_get_free	6
+lwrb.c:328:1:lwrb_get_full	6
+lwrb.c:373:1:lwrb_reset	5
+lwrb.c:387:1:lwrb_get_linear_block_read_address	4
+lwrb.c:400:1:lwrb_get_linear_block_read_length	6
+lwrb.c:435:1:lwrb_skip	7
+lwrb.c:460:1:lwrb_get_linear_block_write_address	4
+lwrb.c:473:1:lwrb_get_linear_block_write_length	6
+lwrb.c:520:1:lwrb_advance	7
+lwrb.c:554:1:lwrb_find	15

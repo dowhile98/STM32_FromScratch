@@ -1,0 +1,6 @@
+connections/org.eclipse.remote.serial.core.connectionType/DWIN/serial.baudRate=11
+connections/org.eclipse.remote.serial.core.connectionType/DWIN/serial.byteSize=3
+connections/org.eclipse.remote.serial.core.connectionType/DWIN/serial.parity=0
+connections/org.eclipse.remote.serial.core.connectionType/DWIN/serial.portName=COM19
+connections/org.eclipse.remote.serial.core.connectionType/DWIN/serial.stopBits=0
+eclipse.preferences.version=1

@@ -1,0 +1,14 @@
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:1704:26:LL_DMA_IsActiveFlag_HT5	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:1726:26:LL_DMA_IsActiveFlag_HT7	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:1792:26:LL_DMA_IsActiveFlag_TC5	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:1814:26:LL_DMA_IsActiveFlag_TC7	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:2144:22:LL_DMA_ClearFlag_HT5	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:2166:22:LL_DMA_ClearFlag_HT7	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:2232:22:LL_DMA_ClearFlag_TC5	16	static
+../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_dma.h:2254:22:LL_DMA_ClearFlag_TC7	16	static
+../Core/Src/hmi_task.c:84:6:buffer_u16	32	static
+../Core/Src/hmi_task.c:93:6:buffer_u32	32	static
+../Core/Src/hmi_task.c:100:12:packet_init	8	static
+../Core/Src/hmi_task.c:109:9:hmi_send_data	16	static
+../Core/Src/hmi_task.c:123:9:dgus_var_write	24	static
+../Core/Src/hmi_task.c:136:6:HMI_Task	24	static

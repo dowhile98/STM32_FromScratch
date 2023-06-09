@@ -1,0 +1,121 @@
+/*
+ * dma_rb_test.c
+ *
+ *  Created on: Jun 6, 2023
+ *      Author: jeffr
+ */
+
+
+#include "main.h"
+#include "usart.h"
+#include "dma.h"
+#include <string.h>
+#include <lwrb.h>
+#include <cmsis_os.h>
+#include <rbuart.h>
+//lwrb_t buff;
+//uint8_t buff_data[64];
+//size_t len;
+//uint8_t *pData;
+//
+//
+//
+//uint8_t rb_send_dma(uint8_t *data, uint8_t len){
+//
+//
+//	lwrb_write(&buff, data, len);
+//	HAL_StatusTypeDef status = HAL_OK;
+//	//iniciar la transferencia dma
+//	if((len = lwrb_get_linear_block_read_length(&buff))>0){
+//		pData = lwrb_get_linear_block_read_address(&buff);
+//		status = HAL_UART_Transmit_DMA(&huart1, pData, len);
+//	}
+//	return status;
+//}
+
+/*defines -------------------------------------------------------*/
+#define MAX_RX_SIZE			256
+#define MAX_TX_SIZE			256
+/*Global variables ----------------------------------------------*/
+rbuart_t rb_rx = {
+		.rbuart = USART1,
+		.dma = DMA2,
+		.stream = LL_DMA_STREAM_5,
+		.channel = LL_DMA_CHANNEL_4,
+		.clear_ht = LL_DMA_ClearFlag_HT5,
+		.clear_tc = LL_DMA_ClearFlag_TC5,
+		.is_ht = LL_DMA_IsActiveFlag_HT5,
+		.is_tc = LL_DMA_IsActiveFlag_TC5,
+		.usart_irq = USART1_IRQn,
+		.stream_irq = DMA2_Stream5_IRQn,
+		.prio = 6
+};
+rbuart_t rb_tx = {
+		.rbuart = USART1,
+		.dma = DMA2,
+		.stream = LL_DMA_STREAM_7,
+		.channel = LL_DMA_CHANNEL_4,
+		.clear_ht = LL_DMA_ClearFlag_HT7,
+		.clear_tc = LL_DMA_ClearFlag_TC7,
+		.is_ht = LL_DMA_IsActiveFlag_HT7,
+		.is_tc = LL_DMA_IsActiveFlag_TC7,
+		.usart_irq = USART1_IRQn,
+		.stream_irq = DMA2_Stream6_IRQn,
+		.prio = 6
+};
+uint8_t rx_data[MAX_RX_SIZE];
+uint8_t tx_data[MAX_TX_SIZE];
+
+
+typedef struct{
+	uint8_t frameH;
+	uint8_t frameL;
+	uint8_t len;
+	uint8_t cmd;
+}header;
+
+
+typedef union __attribute__((aligned(4))){
+	header H;
+	uint8_t data[64];
+	uint8_t len;				//longitud total para el uart
+}packet_t;
+
+
+packet_t * packet_init(void){
+	static packet_t p = {0};
+
+	return &p;
+}
+
+uint8_t dgus_var_write(uint16_t addr, uint32_t val){
+	packet_t *p = packet_init();
+}
+void HMI_Task(void const * argument)
+{
+
+  /* USER CODE BEGIN HMI_Task */
+	rbuart_tx_init(&rb_tx, tx_data, MAX_TX_SIZE);
+	rbuart_rx_init(&rb_rx, rx_data, MAX_RX_SIZE);
+	rbuart_start_receive(&rb_rx);
+
+
+  /* Infinite loop */
+  for(;;)
+  {
+
+
+  }
+  /* USER CODE END HMI_Task */
+}
+
+//void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+//{
+//	uint8_t *data;
+//	lwrb_skip(&buff, len);
+//
+//	if((len = lwrb_get_linear_block_read_length(&buff))>0){
+//		data = lwrb_get_linear_block_read_address(&buff);
+//		HAL_UART_Transmit_DMA(&huart1, data, len);
+//	}
+//}

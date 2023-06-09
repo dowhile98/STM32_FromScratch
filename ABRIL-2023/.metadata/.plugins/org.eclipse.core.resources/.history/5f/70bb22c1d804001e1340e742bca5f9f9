@@ -1,0 +1,40 @@
+/*
+ * dma_rb_test.c
+ *
+ *  Created on: Jun 6, 2023
+ *      Author: jeffr
+ */
+
+
+#include "main.h"
+#include "usart.h"
+#include "dma.h"
+
+
+lwrb_t buff;
+uint8_t buff_data[8];
+
+
+size_t len;
+uint8_t* data;
+
+
+uint8_t rb_send_dma(uint8_t *data, uint8_t len){
+	lwrb_write(&buff, data, len);
+}
+
+
+
+
+void HMI_Task(void const * argument)
+{
+	lwrb_init(&buff, buff_data, 8);
+  /* USER CODE BEGIN HMI_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END HMI_Task */
+}
+

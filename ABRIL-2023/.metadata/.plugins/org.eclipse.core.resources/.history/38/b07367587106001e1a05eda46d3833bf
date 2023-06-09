@@ -1,0 +1,159 @@
+/*
+ * dma_rb_test.c
+ *
+ *  Created on: Jun 6, 2023
+ *      Author: jeffr
+ */
+
+
+#include "main.h"
+#include "usart.h"
+#include "dma.h"
+#include <string.h>
+#include <lwrb.h>
+#include <cmsis_os.h>
+#include <rbuart.h>
+#include <stdlib.h>
+
+/*Typedef -------------------------------------------------------*/
+#define SEND_BUFFER_SIZE		64
+typedef enum{
+	CMD_REG_W = 0x80,
+	CMD_REG_R = 0x81,
+	CMD_VAR_W = 0x82,
+	CMD_VAR_R = 0x83
+}HMI_Cmd_t;
+typedef struct{
+	uint8_t frameH;
+	uint8_t frameL;
+	uint8_t len;
+	uint8_t cmd;
+}header;
+
+
+typedef struct __attribute__((aligned(4))){
+	header H;
+	union Data {
+	    uint8_t cdata[SEND_BUFFER_SIZE];
+	    uint16_t sdata[SEND_BUFFER_SIZE/2];
+	    uint32_t ldata[SEND_BUFFER_SIZE/4];
+	} data;
+	uint8_t len;				//longitud total para el uart
+}packet_t;
+
+/*defines -------------------------------------------------------*/
+#define MAX_RX_SIZE			256
+#define MAX_TX_SIZE			256
+/*Global variables ----------------------------------------------*/
+rbuart_t rb_rx = {
+		.rbuart = USART1,
+		.dma = DMA2,
+		.stream = LL_DMA_STREAM_5,
+		.channel = LL_DMA_CHANNEL_4,
+		.clear_ht = LL_DMA_ClearFlag_HT5,
+		.clear_tc = LL_DMA_ClearFlag_TC5,
+		.is_ht = LL_DMA_IsActiveFlag_HT5,
+		.is_tc = LL_DMA_IsActiveFlag_TC5,
+		.usart_irq = USART1_IRQn,
+		.stream_irq = DMA2_Stream5_IRQn,
+		.prio = 6
+};
+rbuart_t rb_tx = {
+		.rbuart = USART1,
+		.dma = DMA2,
+		.stream = LL_DMA_STREAM_7,
+		.channel = LL_DMA_CHANNEL_4,
+		.clear_ht = LL_DMA_ClearFlag_HT7,
+		.clear_tc = LL_DMA_ClearFlag_TC7,
+		.is_ht = LL_DMA_IsActiveFlag_HT7,
+		.is_tc = LL_DMA_IsActiveFlag_TC7,
+		.usart_irq = USART1_IRQn,
+		.stream_irq = DMA2_Stream6_IRQn,
+		.prio = 6
+};
+uint8_t rx_data[MAX_RX_SIZE];
+uint8_t tx_data[MAX_TX_SIZE];
+
+/**********************************************************************/
+#define SEND_BUFFER_SIZE		64
+#define SWP16(pt) (pt>>8) | (pt<<8)                            /**< Swap XY bytes to be YX */
+#define SWP32(i) ((i&0xff000000)>>24)| ((i&0xff0000)>>8) | ((i&0xff00)<<8) | ((i&0xff)<<24) /**< Swap all bytes in a u32 to be le order */
+#define HEADER0 	0x5A
+#define HEADER1 	0xA5
+
+void buffer_u16(packet_t *p, uint16_t *data, size_t len){
+	for(uint8_t i = 0; i<len; i++){
+		uint16_t pt = data[i];
+		uint16_t pn = SWP16(pt);
+		memcpy(&p->data.cdata[p->len], &pn, 2);
+		p->len += 2;
+	}
+}
+
+void buffer_u32(packet_t *p, uint32_t *data, size_t len){
+	for(uint8_t i = 0; i<len; i++){
+		uint32_t t = SWP32(data[i]);
+		memcpy(&p->data.cdata[p->len], &t, 4);
+		p->len += 4;
+	}
+}
+packet_t * packet_init(void){
+	static packet_t p = {0};
+	memset(&p, 0, sizeof(packet_t));
+	return &p;
+}
+
+/**
+ * @brief
+ */
+uint8_t hmi_send_data(HMI_Cmd_t cmd, packet_t *p){
+	//header init
+	p->H.frameH = HEADER0;
+	p->H.frameL = HEADER1;
+	p->H.len = p->len + 1;
+	p->H.cmd = cmd;
+
+	//Datos
+	rbuart_send(&rb_tx, (uint8_t*)p, sizeof(p->H) + p->len);
+
+	//habilitar la bandera de respuesta
+
+	return 0;
+}
+uint8_t dgus_var_write(uint16_t addr, uint32_t val){
+	packet_t *p = packet_init();
+	//addr
+	buffer_u16(p, &addr, 1);
+	if(val< 0xFFFF){
+		buffer_u16(p, (uint16_t*)&val, 1);
+	}else{
+		buffer_u32(p, &val, 1);
+	}
+	return hmi_send_data(CMD_VAR_W, p);
+}
+
+
+void HMI_Task(void const * argument)
+{
+
+  /* USER CODE BEGIN HMI_Task */
+	rbuart_tx_init(&rb_tx, tx_data, MAX_TX_SIZE);
+	rbuart_rx_init(&rb_rx, rx_data, MAX_RX_SIZE);
+	rbuart_start_receive(&rb_rx);
+	uint16_t count = 0;
+
+
+  /* Infinite loop */
+  for(;;)
+  {
+	  count += 1;
+	  count = (count>999) ? 0 : count;
+	  dgus_var_write(0x1000, count);
+	  osDelay(1);
+	  dgus_var_write(0x5000 + 0x3, count * 8);
+	  osDelay(100);
+  }
+  /* USER CODE END HMI_Task */
+}
+
+
