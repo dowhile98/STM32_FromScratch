@@ -1,0 +1,5 @@
+core_cm4.h:2064:26:ITM_SendChar	4
+main.c:54:5:__io_putchar	1
+main.c:64:5:main	2
+main.c:109:6:BSP_PinRead	2
+main.c:115:6:BSP_PinWrite	2

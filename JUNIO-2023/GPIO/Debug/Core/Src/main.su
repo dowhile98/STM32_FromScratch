@@ -1,0 +1,5 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/GPIO/Drivers/CMSIS/Include/core_cm4.h:2064:26:ITM_SendChar	16	static,ignoring_inline_asm
+../Core/Src/main.c:54:5:__io_putchar	16	static
+../Core/Src/main.c:64:5:main	8	static
+../Core/Src/main.c:109:6:BSP_PinRead	16	static
+../Core/Src/main.c:115:6:BSP_PinWrite	16	static
