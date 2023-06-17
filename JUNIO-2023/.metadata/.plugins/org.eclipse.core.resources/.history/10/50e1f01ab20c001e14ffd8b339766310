@@ -1,0 +1,16 @@
+/*
+ * SysTick.c
+ *
+ *  Created on: 16 jun. 2023
+ *      Author: jeffr
+ */
+
+/*Includes ------------------------------------------------------*/
+
+void SysTick_Init(uint32_t ticks);
+
+void delay_ms(uint32_t delay);
+
+uint32_t GetTicks(void);
+
+void TicksInc(uint32_t inc);

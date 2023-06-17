@@ -1,0 +1,2 @@
+HD44780_Driver.c:33:6:LCD_Delay	1
+HD44780_Driver.c:39:6:LCD_nibble_write	3

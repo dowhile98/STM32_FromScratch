@@ -82,7 +82,7 @@ typedef struct{
 	uint8_t AF;
 }GPIO_ConfigTypedef_t;
 /*Defines -----------------------------------------------------*/
-
+#define GPIO_MODE 	0x3U
 /*Global variables --------------------------------------------*/
 uint32_t input;
 /*Function prototype ------------------------------------------*/
@@ -134,16 +134,20 @@ int main(void)
 	input = (GPIOA->IDR & GPIO_IDR_ID0)>>10;
 
 	//PD9 ->salida
-	gpio.pin = GPIO_PIN_9;
+	gpio.pin = GPIO_PIN_9 | GPIO_PIN_5;
 	gpio.mode = GPIO_MODE_OUTPUT;
 	gpio.outputType = GPIO_OT_PP;
 	gpio.speed = GPIO_SPEED_MEDIUM;
 	gpio.pullup = GPIO_PU_NONE;
 	BSP_PinInit(GPIOD, &gpio);
+
+	gpio.pin = GPIO_PIN_1 | GPIO_PIN_3;
+	gpio.mode = GPIO_MODE_INPUT;
+	gpio.pullup = GPIO_PU;
+	BSP_PinInit(GPIOA, &gpio);
     /* Loop forever */
 	for(;;){
 		if(BSP_PinRead(GPIOA, GPIO_PIN_0)){
-			//GPIOD->BSRR |= GPIO_BSRR_BS12;
 			BSP_PinWrite(GPIOD, (GPIO_PIN_12 | GPIO_PIN_13), GPIO_PIN_SET);
 		}else{
 			//GPIOD->BSRR |= GPIO_BSRR_BR12;
@@ -165,13 +169,45 @@ void BSP_PinWrite(GPIO_TypeDef *P, GPIO_Pin_t pin, GPIO_PinState_t val){
 		P->BSRR |= pin<<16;
 	}
 }
-
+/**
+ * HAL (high abtractions layer)
+ * LL
+ */
 void BSP_PinInit(GPIO_TypeDef *P,GPIO_ConfigTypedef_t *config){
-	uint32_t ioposition = 0;
-	uint32_t position = 0;
-	//MODER
-	ioposition = 0x1<<position;
-	P->MODER &=~(config->pin);
+	uint32_t position;
+	uint32_t ioposition = 0x00U;
+	uint32_t iocurrent = 0x00U;
 
+	for(position = 0; position <16; position++){
+		ioposition = 0x1U<<position;
+
+		iocurrent = (uint32_t)(config->pin) & ioposition;
+
+		if(iocurrent == ioposition){
+			//Modo
+			if(((config->mode & GPIO_MODE) == GPIO_MODE_OUTPUT) || ((config->mode & GPIO_MODE) == GPIO_MODE_AF)){
+				//io speed
+				P->OSPEEDR &=~(0x3<<(position * 2));
+				P->OSPEEDR |= config->speed<< (position * 2);
+				//io type
+				P->OTYPER &=~ (1<<(position ));
+				P->OTYPER |= config->outputType<<position;
+			}
+			if((config->mode & GPIO_MODE) != GPIO_MODE_ANALOG){
+				P->PUPDR &=~ (0x3U<< (position * 2));
+				P->PUPDR |= config->pullup<< (position * 2);
+			}
+			if((config->mode & GPIO_MODE)  == GPIO_MODE_AF){
+				//update actualizarse en una segunda version
+
+			}
+			if((config->mode &GPIO_MODE) == GPIO_MODE_ANALOG){
+				P->PUPDR &=~ (0x3U<<(2 *position));
+			}
+			P->MODER &=~ (0x3u<<(position * 2));
+			P->MODER |= config->mode << (position * 2);
+		}
+	}
+	return;
 }
 

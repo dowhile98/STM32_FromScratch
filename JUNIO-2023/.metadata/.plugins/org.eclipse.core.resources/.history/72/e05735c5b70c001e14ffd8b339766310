@@ -1,0 +1,67 @@
+/*
+ * HD44780.c
+ *
+ *  Created on: 16 jun. 2023
+ *      Author: jeffr
+ */
+
+
+/*Includes -------------------------------------------------------*/
+#include "HD44780.h"
+
+/*Typedef -------------------------------------------------------------*/
+typedef struct {
+	uint8_t DisplayControl;
+	uint8_t DisplayFunction;
+	uint8_t DisplayMode;
+	uint8_t Rows;
+	uint8_t Cols;
+	uint8_t currentX;
+	uint8_t currentY;
+} LCD_Options_t;
+
+/* Private variable ---------------------------------------------------*/
+static LCD_Options_t LCD_Opts;
+/*Macro definition ----------------------------------------------------*/
+#define LCD_RS_LOW              GPIOX_ODR(LCD_RS) = 0
+#define LCD_RS_HIGH             GPIOX_ODR(LCD_RS) = 1
+#define LCD_E_LOW               GPIOX_ODR(LCD_E) = 0
+#define LCD_E_HIGH              GPIOX_ODR(LCD_E) = 1
+
+#define LCD_E_BLINK             LCD_E_HIGH; LCD_Delay(4); LCD_E_LOW; LCD_Delay(4)
+#define LCD_Delay(x)        	delay_ms(x)
+
+/* Commands*/
+#define HD44780_CLEARDISPLAY        0x01
+#define HD44780_RETURNHOME          0x02
+#define HD44780_ENTRYMODESET        0x04
+#define HD44780_DISPLAYCONTROL      0x08
+#define HD44780_CURSORSHIFT         0x10
+#define HD44780_FUNCTIONSET         0x20
+#define HD44780_SETCGRAMADDR        0x40
+#define HD44780_SETDDRAMADDR        0x80
+
+/* Flags for display entry mode */
+#define HD44780_ENTRYRIGHT          0x00
+#define HD44780_ENTRYLEFT           0x02
+#define HD44780_ENTRYSHIFTINCREMENT 0x01
+#define HD44780_ENTRYSHIFTDECREMENT 0x00
+
+/* Flags for display on/off control */
+#define HD44780_DISPLAYON           0x04
+#define HD44780_CURSORON            0x02
+#define HD44780_BLINKON             0x01
+
+/* Flags for display/cursor shift */
+#define HD44780_DISPLAYMOVE         0x08
+#define HD44780_CURSORMOVE          0x00
+#define HD44780_MOVERIGHT           0x04
+#define HD44780_MOVELEFT            0x00
+
+/* Flags for function set */
+#define HD44780_8BITMODE            0x10
+#define HD44780_4BITMODE            0x00
+#define HD44780_2LINE               0x08
+#define HD44780_1LINE               0x00
+#define HD44780_5x10DOTS            0x04
+#define HD44780_5x8DOTS             0x00
