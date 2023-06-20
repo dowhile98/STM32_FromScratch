@@ -1,0 +1,2 @@
+../Drivers/BSP/HD44780_Driver.c:33:6:LCD_Delay	16	static
+../Drivers/BSP/HD44780_Driver.c:39:6:LCD_nibble_write	24	static

@@ -1,0 +1,2 @@
+../Drivers/BSP/display_ll_driver.c:12:6:display_custom	16	static
+../Drivers/BSP/display_ll_driver.c:17:6:display_write	16	static

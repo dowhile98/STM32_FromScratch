@@ -1,0 +1,5 @@
+display.c:11:16:getNumberOfDigits	4
+display.c:28:13:NumberDigits	2
+display.c:39:6:display_init	1
+display.c:44:6:display_setVal_ex	3
+display.c:71:6:display_update	5

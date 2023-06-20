@@ -52,6 +52,12 @@ default.size.stdout \
 OBJDUMP_LIST += \
 SysTick.list \
 
+OBJCOPY_HEX += \
+SysTick.hex \
+
+OBJCOPY_BIN += \
+SysTick.bin \
+
 
 # All Target
 all: main-build
@@ -75,12 +81,22 @@ SysTick.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
+SysTick.hex: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O ihex $(EXECUTABLES) "SysTick.hex"
+	@echo 'Finished building: $@'
+	@echo ' '
+
+SysTick.bin: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objcopy  -O binary $(EXECUTABLES) "SysTick.bin"
+	@echo 'Finished building: $@'
+	@echo ' '
+
 # Other Targets
 clean:
-	-$(RM) SysTick.elf SysTick.list SysTick.map default.size.stdout
+	-$(RM) SysTick.bin SysTick.elf SysTick.hex SysTick.list SysTick.map default.size.stdout
 	-@echo ' '
 
-secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
+secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST) $(OBJCOPY_HEX) $(OBJCOPY_BIN)
 
 fail-specified-linker-script-missing:
 	@echo 'Error: Cannot find the specified linker script. Check the linker settings in the build configuration.'

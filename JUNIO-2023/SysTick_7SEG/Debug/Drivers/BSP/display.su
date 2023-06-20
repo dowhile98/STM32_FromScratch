@@ -1,0 +1,5 @@
+../Drivers/BSP/display.c:11:16:getNumberOfDigits	24	static
+../Drivers/BSP/display.c:28:13:NumberDigits	32	static
+../Drivers/BSP/display.c:39:6:display_init	16	static
+../Drivers/BSP/display.c:44:6:display_setVal_ex	24	static
+../Drivers/BSP/display.c:71:6:display_update	24	static

@@ -1,0 +1,4 @@
+../Drivers/BSP/SysTick.c:14:6:SysTick_Init	16	static
+../Drivers/BSP/SysTick.c:26:6:delay_ms	24	static
+../Drivers/BSP/SysTick.c:39:10:GetTicks	4	static
+../Drivers/BSP/SysTick.c:43:6:TicksInc	16	static
