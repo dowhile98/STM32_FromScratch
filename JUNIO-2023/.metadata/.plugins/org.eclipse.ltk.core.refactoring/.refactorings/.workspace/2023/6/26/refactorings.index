@@ -1,0 +1,5 @@
+1687835169714	Delete 2 resources
+1687836211041	Rename resource 'SysTick'
+1687836309262	Rename resource 'UART'
+1688001503394	Delete resource 'UART2/SysTick.launch'
+1688004497297	Delete resource 'UART2/Lib/lwrb/test'

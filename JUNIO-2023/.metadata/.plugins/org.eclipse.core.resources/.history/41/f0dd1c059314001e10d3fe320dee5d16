@@ -1,0 +1,32 @@
+/*
+ * UART.h
+ *
+ *  Created on: 26 jun. 2023
+ *      Author: jeffr
+ */
+
+#ifndef BSP_UART_H_
+#define BSP_UART_H_
+
+/*Includes ---------------------------------------------------*/
+#include "stm32f4xx.h"
+
+/*Typedefs --------------------------------------------------*/
+typedef enum{
+	UART_1_STOPBIT,
+	UART_2_STOPBIT
+};
+typedef struct{
+	uint8_t stopBit;
+	uint8_t parity;
+	uint8_t over;
+	uint32_t baud;
+	uint32_t pclk;
+}UART_ConfigTypedef_t;
+/*Function prototype ----------------------------------------*/
+/**
+ *
+ */
+void UART_Init(USART_TypeDef *USART, UART_ConfigTypedef_t *config);
+
+#endif /* BSP_UART_H_ */

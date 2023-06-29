@@ -1,20 +1,27 @@
-21:46:52 **** Incremental Build of configuration Debug for project SysTick_7SEG ****
+21:38:03 **** Incremental Build of configuration Debug for project UART2 ****
 make -j8 all 
-arm-none-eabi-gcc "../Drivers/BSP/display.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/SysTick_7SEG/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/SysTick_7SEG/Drivers/BSP" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/SysTick_7SEG/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/SysTick_7SEG/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Drivers/BSP/display.d" -MT"Drivers/BSP/display.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/BSP/display.o"
-arm-none-eabi-gcc -o "SysTick_7SEG.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\JUNIO-2023\SysTick_7SEG\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SysTick_7SEG.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: SysTick_7SEG.elf
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Lib/nanoModbus" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Lib/lwrb/src/include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Lib/lwrb/src/include/lwrb" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Drivers/BSP" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "UART2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\JUNIO-2023\UART2\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: UART2.elf
  
-arm-none-eabi-size   SysTick_7SEG.elf 
-arm-none-eabi-objdump -h -S  SysTick_7SEG.elf  > "SysTick_7SEG.list"
-arm-none-eabi-objcopy  -O ihex  SysTick_7SEG.elf  "SysTick_7SEG.hex"
-arm-none-eabi-objcopy  -O binary  SysTick_7SEG.elf  "SysTick_7SEG.bin"
+arm-none-eabi-size   UART2.elf 
+arm-none-eabi-objdump -h -S  UART2.elf  > "UART2.list"
+arm-none-eabi-objcopy  -O ihex  UART2.elf  "UART2.hex"
    text	   data	    bss	    dec	    hex	filename
-   6016	    108	   1612	   7736	   1e38	SysTick_7SEG.elf
+  18228	    108	   1988	  20324	   4f64	UART2.elf
+arm-none-eabi-objcopy  -O binary  UART2.elf  "UART2.bin"
 Finished building: default.size.stdout
-Finished building: SysTick_7SEG.hex
-Finished building: SysTick_7SEG.list
-Finished building: SysTick_7SEG.bin
+ 
+Finished building: UART2.hex
+ 
+Finished building: UART2.bin
+Finished building: UART2.list
  
  
- 
+21:40:06 **** Incremental Build of configuration Debug for project UART2 ****
+make -j8 all 
+arm-none-eabi-size   UART2.elf 
+   text	   data	    bss	    dec	    hex	filename
+  18228	    108	   1988	  20324	   4f64	UART2.elf
+Finished building: default.size.stdout
  
