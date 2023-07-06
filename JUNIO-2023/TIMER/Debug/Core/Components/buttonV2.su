@@ -1,0 +1,2 @@
+../Core/Components/buttonV2.c:16:6:Button_InitTime	24	static
+../Core/Components/buttonV2.c:28:6:Button_Update	16	static
