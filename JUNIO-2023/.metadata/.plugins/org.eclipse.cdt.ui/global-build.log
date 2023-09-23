@@ -1,27 +1,14 @@
-21:38:03 **** Incremental Build of configuration Debug for project UART2 ****
+02:54:46 **** Incremental Build of configuration Debug for project RTOS ****
 make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Core/Inc" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Lib/nanoModbus" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Lib/lwrb/src/include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Lib/lwrb/src/include/lwrb" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Drivers/BSP" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/JUNIO-2023/UART2/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "UART2.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\JUNIO-2023\UART2\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="UART2.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: UART2.elf
+arm-none-eabi-gcc "../Core/Src/App.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -DUSE_FULL_LL_DRIVER -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -I../Middlewares/Third_Party/FreeRTOS/Source/include -I../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS -I../Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM4F -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/App.d" -MT"Core/Src/App.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/App.o"
+arm-none-eabi-gcc -o "RTOS.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\JUNIO-2023\RTOS\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="RTOS.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: RTOS.elf
  
-arm-none-eabi-size   UART2.elf 
-arm-none-eabi-objdump -h -S  UART2.elf  > "UART2.list"
-arm-none-eabi-objcopy  -O ihex  UART2.elf  "UART2.hex"
+arm-none-eabi-size   RTOS.elf 
+arm-none-eabi-objdump -h -S  RTOS.elf  > "RTOS.list"
    text	   data	    bss	    dec	    hex	filename
-  18228	    108	   1988	  20324	   4f64	UART2.elf
-arm-none-eabi-objcopy  -O binary  UART2.elf  "UART2.bin"
+  21476	    124	  18020	  39620	   9ac4	RTOS.elf
 Finished building: default.size.stdout
  
-Finished building: UART2.hex
- 
-Finished building: UART2.bin
-Finished building: UART2.list
- 
- 
-21:40:06 **** Incremental Build of configuration Debug for project UART2 ****
-make -j8 all 
-arm-none-eabi-size   UART2.elf 
-   text	   data	    bss	    dec	    hex	filename
-  18228	    108	   1988	  20324	   4f64	UART2.elf
-Finished building: default.size.stdout
+Finished building: RTOS.list
  

@@ -1,0 +1,6 @@
+../Core/Src/freertos.c:78:6:vApplicationGetIdleTaskMemory	24	static
+../Core/Src/freertos.c:92:6:MX_FREERTOS_Init	176	static
+../Core/Src/freertos.c:161:13:LCD_Task	16	static
+../Core/Src/freertos.c:179:13:Sensor_Task	16	static
+../Core/Src/freertos.c:197:13:Input_Task	16	static
+../Core/Src/freertos.c:215:13:Control_Task	16	static

@@ -92,6 +92,12 @@ int __io_putchar(int ch){
 
 	return ch;
 }
+/**
+ * @brief esta funcion lee un pin
+ * @param [P]: puerto
+ * @param [pin]
+ * @return bool
+ */
 bool BSP_PinRead(GPIO_TypeDef *P, GPIO_Pin_t pin);
 
 void BSP_PinWrite(GPIO_TypeDef *P, GPIO_Pin_t pin, GPIO_PinState_t val);

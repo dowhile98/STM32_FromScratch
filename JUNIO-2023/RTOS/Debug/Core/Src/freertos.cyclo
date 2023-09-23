@@ -1,0 +1,6 @@
+freertos.c:78:6:vApplicationGetIdleTaskMemory	1
+freertos.c:92:6:MX_FREERTOS_Init	1
+freertos.c:161:13:LCD_Task	1
+freertos.c:179:13:Sensor_Task	1
+freertos.c:197:13:Input_Task	1
+freertos.c:215:13:Control_Task	1

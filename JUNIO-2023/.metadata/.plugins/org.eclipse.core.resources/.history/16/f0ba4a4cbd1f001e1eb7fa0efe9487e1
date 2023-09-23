@@ -1,0 +1,63 @@
+/*
+ * App.c
+ *
+ *  Created on: Jul 11, 2023
+ *      Author: jeffr
+ */
+#include "gpio.h"
+#include "main.h"
+/*Typedef ----------------------------------------------------------------*/
+
+/*Extern variables -------------------------------------------------------*/
+/**
+* @brief Function implementing the Sensor thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Sensor_Task */
+void Sensor_Task(void const * argument)
+{
+  /* USER CODE BEGIN Sensor_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Sensor_Task */
+}
+
+/* USER CODE BEGIN Header_Input_Task */
+/**
+* @brief Function implementing the Input thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Input_Task */
+void Input_Task(void const * argument)
+{
+  /* USER CODE BEGIN Input_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Input_Task */
+}
+
+/* USER CODE BEGIN Header_Control_Task */
+/**
+* @brief Function implementing the Control thread.
+* @param argument: Not used
+* @retval None
+*/
+/* USER CODE END Header_Control_Task */
+void Control_Task(void const * argument)
+{
+  /* USER CODE BEGIN Control_Task */
+  /* Infinite loop */
+  for(;;)
+  {
+    osDelay(1);
+  }
+  /* USER CODE END Control_Task */
+}
