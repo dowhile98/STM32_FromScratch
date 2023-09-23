@@ -1,0 +1,9 @@
+DeviceConfigurationTool..FirmwareRepositoryPath=D\:\\STM32Cube\\Repository
+DeviceConfigurationTool..UpdaterCheckInterval=5
+DeviceConfigurationTool..UpdaterDataRefresh=dataRefreshDataOnly
+DeviceConfigurationTool..UpdaterDataRefreshInterfval=3
+DeviceConfigurationTool.AskToSwitchToCPerspectiveOnCodeGeneration=false
+DeviceConfigurationTool.AskToSwitchToCubeMxPerspective=false
+DeviceConfigurationTool.SwitchToCPerspectiveOnCodeGeneration=true
+DeviceConfigurationTool.SwitchToCubeMxPerspective=true
+eclipse.preferences.version=1
