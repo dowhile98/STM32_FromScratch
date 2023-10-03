@@ -1,10 +1,9 @@
-21:35:43 **** Incremental Build of configuration Debug for project GPIO ****
-make -j8 all 
-arm-none-eabi-size   GPIO.elf 
-   text	   data	    bss	    dec	    hex	filename
-    712	      8	   1568	   2288	    8f0	GPIO.elf
-Finished building: default.size.stdout
+20:40:43 **** Clean-only build of configuration Debug for project GPIO ****
+make -j8 clean 
+rm -rf ./Startup/startup_stm32c031c6tx.d ./Startup/startup_stm32c031c6tx.o
+rm -rf ./Src/main.cyclo ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.cyclo ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.cyclo ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su ./Src/system_stm32c0xx.cyclo ./Src/system_stm32c0xx.d ./Src/system_stm32c0xx.o ./Src/system_stm32c0xx.su
+rm -rf GPIO.elf GPIO.list GPIO.map default.size.stdout
  
 
-21:35:44 Build Finished. 0 errors, 0 warnings. (took 559ms)
+20:40:46 Build Finished. 0 errors, 0 warnings. (took 2s.620ms)
 

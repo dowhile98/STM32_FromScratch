@@ -1,28 +1,25 @@
-21:26:34 **** Incremental Build of configuration Debug for project GPIO ****
+21:12:39 **** Incremental Build of configuration Debug for project SysTick_Polling ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32C031xx -DNUCLEO_C031C6 -DSTM32 -DSTM32C0 -DSTM32C031C6Tx -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/GPIO/Drivers/CMSIS/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/GPIO/Drivers/CMSIS/Device/ST/STM32C0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "GPIO.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\SETIEMBRE-2023\GPIO\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="GPIO.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: GPIO.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32C031xx -DNUCLEO_C031C6 -DSTM32 -DSTM32C0 -DSTM32C031C6Tx -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/SysTick_Polling/Drivers/CMSIS/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/SysTick_Polling/Drivers/CMSIS/Device/ST/STM32C0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:38:14: warning: unused variable 'PC13' [-Wunused-variable]
+   38 |         bool PC13;
+      |              ^~~~
+arm-none-eabi-gcc -o "SysTick_Polling.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\SETIEMBRE-2023\SysTick_Polling\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SysTick_Polling.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: SysTick_Polling.elf
  
-arm-none-eabi-size   GPIO.elf 
-arm-none-eabi-objdump -h -S  GPIO.elf  > "GPIO.list"
+arm-none-eabi-size   SysTick_Polling.elf 
+arm-none-eabi-objdump -h -S  SysTick_Polling.elf  > "SysTick_Polling.list"
    text	   data	    bss	    dec	    hex	filename
-    712	      8	   1568	   2288	    8f0	GPIO.elf
+   1284	     12	   1564	   2860	    b2c	SysTick_Polling.elf
 Finished building: default.size.stdout
  
-Finished building: GPIO.list
+Finished building: SysTick_Polling.list
  
-21:30:15 **** Incremental Build of configuration Debug for project GPIO ****
+21:12:56 **** Incremental Build of configuration Debug for project SysTick_Polling ****
 make -j8 all 
-arm-none-eabi-size   GPIO.elf 
+arm-none-eabi-size   SysTick_Polling.elf 
    text	   data	    bss	    dec	    hex	filename
-    712	      8	   1568	   2288	    8f0	GPIO.elf
-Finished building: default.size.stdout
- 
-21:35:43 **** Incremental Build of configuration Debug for project GPIO ****
-make -j8 all 
-arm-none-eabi-size   GPIO.elf 
-   text	   data	    bss	    dec	    hex	filename
-    712	      8	   1568	   2288	    8f0	GPIO.elf
+   1284	     12	   1564	   2860	    b2c	SysTick_Polling.elf
 Finished building: default.size.stdout
  

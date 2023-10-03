@@ -1,0 +1,10 @@
+21:12:56 **** Incremental Build of configuration Debug for project SysTick_Polling ****
+make -j8 all 
+arm-none-eabi-size   SysTick_Polling.elf 
+   text	   data	    bss	    dec	    hex	filename
+   1284	     12	   1564	   2860	    b2c	SysTick_Polling.elf
+Finished building: default.size.stdout
+ 
+
+21:12:57 Build Finished. 0 errors, 0 warnings. (took 864ms)
+
