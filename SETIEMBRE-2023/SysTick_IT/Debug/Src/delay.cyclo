@@ -1,0 +1,6 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/SysTick_IT/Drivers/CMSIS/Include/core_cm0plus.h:850:22:__NVIC_SetPriority	2
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/SysTick_IT/Drivers/CMSIS/Include/core_cm0plus.h:1058:26:SysTick_Config	2
+../Src/delay.c:13:6:delay_init	1
+../Src/delay.c:19:6:TicksInc	1
+../Src/delay.c:24:6:delay_ms	2
+../Src/delay.c:30:10:GetTicks	1

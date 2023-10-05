@@ -1,0 +1,23 @@
+/*
+ * delay.c
+ *
+ *  Created on: Oct 4, 2023
+ *      Author: jeffr
+ */
+
+
+#include "delay.h"
+
+
+void delay_init(uint32_t ticks){
+	SysTick_Config(ticks);
+	return;
+}
+
+void delay_ms(uint32_t delay){
+
+}
+
+uint32_t GetTicks(void){
+
+}

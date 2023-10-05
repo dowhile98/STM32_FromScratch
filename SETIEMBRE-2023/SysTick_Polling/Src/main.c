@@ -27,7 +27,8 @@
 //#define IOPENR		(*(volatile uint32_t*)(RCC_IOPENR_ADDR))
 
 /*Global variables -----------------------------------------------------------*/
-
+#define PA5_ADD			0x40021200
+#define PA5				(*(volatile uint8_t *)PA5_ADD) //bit 5 GPIOA->ODR (OD5)
 /*Function prototype --------------------------------------------------------*/
 void SysTick_Init(uint32_t ticks);
 void delay_ms(uint32_t delay);
@@ -35,6 +36,7 @@ void delay_ms(uint32_t delay);
 
 int main(void)
 {
+
 	bool PC13;
     /* Loop forever */
 //	volatile uint32_t *RCC_IOPENR = (volatile uint32_t *)(RCC_IOPENR_ADDR);
@@ -77,6 +79,12 @@ int main(void)
 //		if(SysTick->CTRL & SysTick_CTRL_COUNTFLAG_Msk){ //update event
 //			GPIOA->ODR ^= 1<<5;
 //		}
+//		if((millis() - anterior) >= 100){
+//			anterior = millis();
+//			//todo
+//
+//		}
+
 		GPIOA->ODR ^= 1<<5;
 		delay_ms(10);
 	}
