@@ -1,0 +1,3 @@
+../Components/ioLibrary_Driver/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c:28:5:MQTTSerialize_unsubscribeLength	2
+../Components/ioLibrary_Driver/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c:49:5:MQTTSerialize_unsubscribe	3
+../Components/ioLibrary_Driver/Internet/MQTT/MQTTPacket/src/MQTTUnsubscribeClient.c:92:5:MQTTDeserialize_unsuback	2

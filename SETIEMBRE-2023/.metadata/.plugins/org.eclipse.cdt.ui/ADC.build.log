@@ -1,0 +1,24 @@
+22:30:00 **** Incremental Build of configuration Debug for project ADC ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32C031xx -DNUCLEO_C031C6 -DSTM32 -DSTM32C0 -DSTM32C031C6Tx -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/ADC/Components/lwbtn/src/include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/ADC/Drivers/CMSIS/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/ADC/Drivers/CMSIS/Device/ST/STM32C0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+../Src/main.c: In function 'ADC1_Init':
+../Src/main.c:232:37: warning: format '%X' expects argument of type 'unsigned int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  232 |         printf("ADC CAL. FACTOR: 0x%X\r\n", ADC1->DR);
+      |                                    ~^
+      |                                     |
+      |                                     unsigned int
+      |                                    %lX
+arm-none-eabi-gcc -o "ADC.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\SETIEMBRE-2023\ADC\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC.elf
+ 
+arm-none-eabi-size   ADC.elf 
+arm-none-eabi-objdump -h -S  ADC.elf  > "ADC.list"
+   text	   data	    bss	    dec	    hex	filename
+   8000	    136	   1936	  10072	   2758	ADC.elf
+Finished building: default.size.stdout
+ 
+Finished building: ADC.list
+ 
+
+22:30:02 Build Finished. 0 errors, 1 warnings. (took 2s.452ms)
+

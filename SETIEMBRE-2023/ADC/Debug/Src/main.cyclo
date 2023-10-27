@@ -1,0 +1,8 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/ADC/Drivers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	2
+../Src/main.c:81:5:main	3
+../Src/main.c:183:6:UART2_Init	1
+../Src/main.c:215:6:ADC1_Init	2
+../Src/main.c:257:1:prv_btn_event	11
+../Src/main.c:288:1:prv_btn_get_state	1
+../Src/main.c:296:9:getButton1	1
+../Src/main.c:300:5:__io_putchar	2

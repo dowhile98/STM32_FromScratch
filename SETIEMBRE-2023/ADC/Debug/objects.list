@@ -1,0 +1,8 @@
+"./Components/lwbtn/src/lwbtn/lwbtn.o"
+"./Src/delay.o"
+"./Src/main.o"
+"./Src/stm32c0xx_it.o"
+"./Src/syscalls.o"
+"./Src/sysmem.o"
+"./Src/system_stm32c0xx.o"
+"./Startup/startup_stm32c031c6tx.o"

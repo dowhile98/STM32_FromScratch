@@ -1,0 +1,9 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/TIMER_BASE/Drivers/CMSIS/Include/core_cm0plus.h:741:22:__NVIC_EnableIRQ	16	static,ignoring_inline_asm
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/TIMER_BASE/Drivers/CMSIS/Include/core_cm0plus.h:850:22:__NVIC_SetPriority	24	static
+../Src/main.c:34:9:getButton1	8	static
+../Src/main.c:37:9:getButton2	8	static
+../Src/main.c:40:9:getButton3	8	static
+../Src/main.c:69:5:main	16	static
+../Src/main.c:122:1:prv_btn_get_state	24	static
+../Src/main.c:155:1:prv_btn_event	32	static
+../Src/main.c:184:7:TIM14_BaseInit	32	static

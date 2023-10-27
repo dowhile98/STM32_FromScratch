@@ -1,0 +1,17 @@
+21:49:33 **** Incremental Build of configuration Debug for project TIMER_BASE ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DSTM32C031xx -DNUCLEO_C031C6 -DSTM32 -DSTM32C0 -DSTM32C031C6Tx -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/TIMER_BASE/Components/lwbtn/src/include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/TIMER_BASE/Drivers/CMSIS/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/SETIEMBRE-2023/TIMER_BASE/Drivers/CMSIS/Device/ST/STM32C0xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "TIMER_BASE.elf" @"objects.list"   -mcpu=cortex-m0plus -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\SETIEMBRE-2023\TIMER_BASE\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TIMER_BASE.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TIMER_BASE.elf
+ 
+arm-none-eabi-size   TIMER_BASE.elf 
+arm-none-eabi-objdump -h -S  TIMER_BASE.elf  > "TIMER_BASE.list"
+   text	   data	    bss	    dec	    hex	filename
+   7460	    200	   1928	   9588	   2574	TIMER_BASE.elf
+Finished building: default.size.stdout
+ 
+Finished building: TIMER_BASE.list
+ 
+
+21:49:34 Build Finished. 0 errors, 0 warnings. (took 1s.423ms)
+

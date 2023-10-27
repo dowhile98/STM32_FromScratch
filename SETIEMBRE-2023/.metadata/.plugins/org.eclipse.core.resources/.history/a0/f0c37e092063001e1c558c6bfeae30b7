@@ -1,9 +1,0 @@
-/*
- * stm32c0xx_it.c
- *
- *  Created on: Oct 4, 2023
- *      Author: jeffr
- */
-#include "stm32c0xx.h"
-#include "delay.h"
-

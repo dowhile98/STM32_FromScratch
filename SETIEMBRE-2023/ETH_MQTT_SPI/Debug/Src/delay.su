@@ -1,0 +1,4 @@
+../Src/delay.c:20:17:GetTick	4	static
+../Src/delay.c:26:6:delay_init_it	16	static
+../Src/delay.c:45:6:delay_ms	24	static
+../Src/delay.c:57:10:millis	8	static
