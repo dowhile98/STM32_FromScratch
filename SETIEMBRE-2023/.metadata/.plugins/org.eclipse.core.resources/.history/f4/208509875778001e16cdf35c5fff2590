@@ -1,0 +1,13 @@
+/*
+ * driver_mpu6050_code.h
+ *
+ *  Created on: Oct 31, 2023
+ *      Author: jeffr
+ */
+
+#ifndef MPU6050_DRIVER_MPU6050_CODE_H_
+#define MPU6050_DRIVER_MPU6050_CODE_H_
+
+
+
+#endif /* MPU6050_DRIVER_MPU6050_CODE_H_ */

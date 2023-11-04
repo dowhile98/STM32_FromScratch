@@ -1,0 +1,11 @@
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:126:10:get16	1
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:135:11:put16	1
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:153:5:parse_name	9
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:214:11:dns_question	2
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:240:11:dns_answer	16
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:335:8:parseDNSMSG	13
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:413:9:dns_makequery	4
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:474:8:check_DNS_timeout	3
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:494:6:DNS_init	1
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:502:8:DNS_run	5
+../Components/ioLibrary_Driver/Internet/DNS/dns.c:561:6:DNS_time_handler	1

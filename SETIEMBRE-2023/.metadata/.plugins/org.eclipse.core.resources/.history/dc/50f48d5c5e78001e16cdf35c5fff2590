@@ -1,0 +1,13 @@
+/*
+ * driver_mpu6050_basic.h
+ *
+ *  Created on: Oct 31, 2023
+ *      Author: jeffr
+ */
+
+#ifndef DRIVER_MPU6050_BASIC_H_
+#define DRIVER_MPU6050_BASIC_H_
+
+
+
+#endif /* DRIVER_MPU6050_BASIC_H_ */

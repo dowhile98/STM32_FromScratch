@@ -1,0 +1,21 @@
+[
+    {
+        "id": "75456d6f35f46f0f",
+        "type": "function",
+        "z": "b65bc07924bf0ae7",
+        "name": "Preparar Mensaje",
+        "func": "var currentLedState = flow.get('ledState') || false;\ncurrentLedState = !currentLedState;\nmsg.payload = {\n    ledState: currentLedState,\n};\nflow.set('ledState', currentLedState);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 280,
+        "wires": [
+            [
+                "5f369e4b.ca9d9c"
+            ]
+        ]
+    }
+]
