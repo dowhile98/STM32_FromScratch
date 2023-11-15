@@ -1,44 +1,4 @@
-body {
-      font-family: 'Arial', sans-serif;
-      margin: 20px;
-      padding: 20px;
-      background-color: #f5f5f5;
-    }
 
-    header {
-      text-align: center;
-      background-color: #333;
-      color: #fff;
-      padding: 10px;
-      border-radius: 5px;
-    }
-
-    section {
-      margin-top: 20px;
-    }
-
-    h2 {
-      color: #333;
-      border-bottom: 2px solid #333;
-    }
-
-    p {
-      line-height: 1.6;
-      color: #555;
-    }
-
-    .highlight {
-      background-color: #ffeeba;
-      padding: 5px;
-      border-radius: 3px;
-    }
-
-    .recorded {
-      background-color: #28a745;
-      color: #fff;
-      padding: 5px 10px;
-      border-radius: 3px;
-    }
 <body>
 
   <header>
