@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Curso ARM Cortex M - Resumen</title>
-  <style>
-    body {
+body {
       font-family: 'Arial', sans-serif;
       margin: 20px;
       padding: 20px;
@@ -46,8 +39,6 @@
       padding: 5px 10px;
       border-radius: 3px;
     }
-  </style>
-</head>
 <body>
 
   <header>
