@@ -81,6 +81,9 @@
     <p class="recorded">Clase 3 - Grabada</p>
   </section>
 
+</body>
+</html>
+
   <!-- Continúa con el resto de las secciones -->
 
 </body>
