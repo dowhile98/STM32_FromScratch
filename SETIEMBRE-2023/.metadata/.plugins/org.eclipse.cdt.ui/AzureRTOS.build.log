@@ -1,0 +1,10 @@
+21:25:10 **** Incremental Build of configuration Debug for project AzureRTOS ****
+make -j8 all 
+arm-none-eabi-size   AzureRTOS.elf 
+   text	   data	    bss	    dec	    hex	filename
+  19240	    116	  15244	  34600	   8728	AzureRTOS.elf
+Finished building: default.size.stdout
+ 
+
+21:25:16 Build Finished. 0 errors, 0 warnings. (took 5s.981ms)
+
