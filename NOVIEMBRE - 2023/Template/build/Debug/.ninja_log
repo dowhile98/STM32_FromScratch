@@ -1,0 +1,7 @@
+# ninja log v5
+46	308	7218080598496696	CMakeFiles/Template.dir/Startup/startup_stm32f407vgtx.s.obj	71c347896d3f350f
+26	361	7218080599016884	CMakeFiles/Template.dir/Src/sysmem.c.obj	e6d3873c761580e5
+19	648	7218080601915840	CMakeFiles/Template.dir/Src/syscalls.c.obj	792ffc4594d1739e
+36	991	7218080605317245	CMakeFiles/Template.dir/Src/system_stm32f4xx.c.obj	660d76d51a183413
+7	1039	7218080605809658	CMakeFiles/Template.dir/Src/main.c.obj	2421b97f7ddfd1e2
+1040	1880	7218080610266969	Template.elf	4b849ba02998222f
