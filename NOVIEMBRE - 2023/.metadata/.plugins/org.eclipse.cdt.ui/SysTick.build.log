@@ -1,0 +1,10 @@
+21:07:37 **** Incremental Build of configuration Debug for project SysTick ****
+make -j8 all 
+arm-none-eabi-size   SysTick.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3020	     12	   1572	   4604	   11fc	SysTick.elf
+Finished building: default.size.stdout
+ 
+
+21:07:38 Build Finished. 0 errors, 0 warnings. (took 834ms)
+

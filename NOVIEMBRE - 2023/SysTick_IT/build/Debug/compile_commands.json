@@ -1,0 +1,44 @@
+[
+{
+  "directory": "D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug",
+  "command": "C:\\ARM_TOOLS\\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -DDEBUG -DHSE_VALUE=8000000 -DSTM32F407VGTx -DSTM32F407xx -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Inc\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Include\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Device/ST/STM32F4xx/Include\" -g -std=gnu11 -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv5-d16 -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\SysTick_IT.dir\\Src\\main.c.obj -c \"D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\main.c\"",
+  "file": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\main.c",
+  "output": "CMakeFiles\\SysTick_IT.dir\\Src\\main.c.obj"
+},
+{
+  "directory": "D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug",
+  "command": "C:\\ARM_TOOLS\\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -DDEBUG -DHSE_VALUE=8000000 -DSTM32F407VGTx -DSTM32F407xx -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Inc\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Include\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Device/ST/STM32F4xx/Include\" -g -std=gnu11 -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv5-d16 -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\SysTick_IT.dir\\Src\\delay.c.obj -c \"D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\delay.c\"",
+  "file": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\delay.c",
+  "output": "CMakeFiles\\SysTick_IT.dir\\Src\\delay.c.obj"
+},
+{
+  "directory": "D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug",
+  "command": "C:\\ARM_TOOLS\\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -DDEBUG -DHSE_VALUE=8000000 -DSTM32F407VGTx -DSTM32F407xx -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Inc\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Include\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Device/ST/STM32F4xx/Include\" -g -std=gnu11 -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv5-d16 -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\SysTick_IT.dir\\Src\\stm32f4xx_it.c.obj -c \"D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\stm32f4xx_it.c\"",
+  "file": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\stm32f4xx_it.c",
+  "output": "CMakeFiles\\SysTick_IT.dir\\Src\\stm32f4xx_it.c.obj"
+},
+{
+  "directory": "D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug",
+  "command": "C:\\ARM_TOOLS\\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -DDEBUG -DHSE_VALUE=8000000 -DSTM32F407VGTx -DSTM32F407xx -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Inc\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Include\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Device/ST/STM32F4xx/Include\" -g -std=gnu11 -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv5-d16 -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\SysTick_IT.dir\\Src\\syscalls.c.obj -c \"D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\syscalls.c\"",
+  "file": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\syscalls.c",
+  "output": "CMakeFiles\\SysTick_IT.dir\\Src\\syscalls.c.obj"
+},
+{
+  "directory": "D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug",
+  "command": "C:\\ARM_TOOLS\\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -DDEBUG -DHSE_VALUE=8000000 -DSTM32F407VGTx -DSTM32F407xx -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Inc\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Include\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Device/ST/STM32F4xx/Include\" -g -std=gnu11 -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv5-d16 -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\SysTick_IT.dir\\Src\\sysmem.c.obj -c \"D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\sysmem.c\"",
+  "file": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\sysmem.c",
+  "output": "CMakeFiles\\SysTick_IT.dir\\Src\\sysmem.c.obj"
+},
+{
+  "directory": "D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug",
+  "command": "C:\\ARM_TOOLS\\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -DDEBUG -DHSE_VALUE=8000000 -DSTM32F407VGTx -DSTM32F407xx -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Inc\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Include\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Device/ST/STM32F4xx/Include\" -g -std=gnu11 -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv5-d16 -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\SysTick_IT.dir\\Src\\system_stm32f4xx.c.obj -c \"D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\system_stm32f4xx.c\"",
+  "file": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Src\\system_stm32f4xx.c",
+  "output": "CMakeFiles\\SysTick_IT.dir\\Src\\system_stm32f4xx.c.obj"
+},
+{
+  "directory": "D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug",
+  "command": "C:\\ARM_TOOLS\\arm-gnu-toolchain-12.3.rel1-mingw-w64-i686-arm-none-eabi\\bin\\arm-none-eabi-gcc.exe -fdata-sections -ffunction-sections --specs=nano.specs -Wl,--gc-sections -DDEBUG -DHSE_VALUE=8000000 -DSTM32F407VGTx -DSTM32F407xx -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Inc\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Include\" -I\"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Device/ST/STM32F4xx/Include\" -g -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv5-d16 -Wall -Wextra -Wpedantic -Wno-unused-parameter -Og -g3 -ggdb -o CMakeFiles\\SysTick_IT.dir\\Startup\\startup_stm32f407vgtx.s.obj -c \"D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Startup\\startup_stm32f407vgtx.s\"",
+  "file": "D:\\TRABAJO\\UMAKER\\CURSOS\\ARM - NUCLEO\\STM32_FromScratch\\NOVIEMBRE - 2023\\SysTick_IT\\Startup\\startup_stm32f407vgtx.s",
+  "output": "CMakeFiles\\SysTick_IT.dir\\Startup\\startup_stm32f407vgtx.s.obj"
+}
+]

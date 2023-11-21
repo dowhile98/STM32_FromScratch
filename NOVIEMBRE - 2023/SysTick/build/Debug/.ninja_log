@@ -1,0 +1,7 @@
+# ninja log v5
+62	329	7222349252390654	CMakeFiles/SysTick.dir/Startup/startup_stm32f407vgtx.s.obj	940849dd68dbf08d
+40	816	7222349257158334	CMakeFiles/SysTick.dir/Src/sysmem.c.obj	55a8726604c9b55b
+51	1242	7222349260181766	CMakeFiles/SysTick.dir/Src/system_stm32f4xx.c.obj	1876ef9574342298
+29	1244	7222349260312826	CMakeFiles/SysTick.dir/Src/syscalls.c.obj	cc2296fa608e3f8c
+11	1246	7222349261215002	CMakeFiles/SysTick.dir/Src/main.c.obj	b9c21df9662ebc39
+1247	2128	7222349267519340	SysTick.elf	e31e41f538a3596e
