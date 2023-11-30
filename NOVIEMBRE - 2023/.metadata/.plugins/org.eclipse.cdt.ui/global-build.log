@@ -1,21 +1,25 @@
-21:39:17 **** Incremental Build of configuration Debug for project SysTick_IT ****
+21:46:58 **** Incremental Build of configuration Debug for project USART ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F407G_DISC1 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-g++ -o "SysTick_IT.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\NOVIEMBRE - 2023\SysTick_IT\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="SysTick_IT.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -lstdc++ -lsupc++ -Wl,--end-group
-Finished building target: SysTick_IT.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429xx -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/USART/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/USART/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+../Src/main.c: In function 'main':
+../Src/main.c:54:17: warning: unused variable 'txt' [-Wunused-variable]
+   54 |         uint8_t txt[50];
+      |                 ^~~
+arm-none-eabi-gcc -o "USART.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\NOVIEMBRE - 2023\USART\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: USART.elf
  
-arm-none-eabi-size   SysTick_IT.elf 
-arm-none-eabi-objdump -h -S  SysTick_IT.elf  > "SysTick_IT.list"
+arm-none-eabi-size  USART.elf 
+arm-none-eabi-objdump -h -S USART.elf  > "USART.list"
    text	   data	    bss	    dec	    hex	filename
-   3164	     12	   1572	   4748	   128c	SysTick_IT.elf
+  16152	    464	   2168	  18784	   4960	USART.elf
 Finished building: default.size.stdout
  
-Finished building: SysTick_IT.list
+Finished building: USART.list
  
-21:39:30 **** Incremental Build of configuration Debug for project SysTick_IT ****
+21:47:07 **** Incremental Build of configuration Debug for project USART ****
 make -j8 all 
-arm-none-eabi-size   SysTick_IT.elf 
+arm-none-eabi-size  USART.elf 
    text	   data	    bss	    dec	    hex	filename
-   3164	     12	   1572	   4748	   128c	SysTick_IT.elf
+  16152	    464	   2168	  18784	   4960	USART.elf
 Finished building: default.size.stdout
  

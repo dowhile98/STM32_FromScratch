@@ -84,11 +84,11 @@ int main(void)
 	 * @brief systick
 	 * 
 	 */
-	temp = SystemCoreClock / 1E+3;
+	temp = 16E+6 / 1E+3;
 	SysTick_Config(temp);
 	ledTicks = getTicks();
 	for(;;){
-		if((getTicks() - ledTicks)>= 100){
+		if((getTicks() - ledTicks)>= 50){
 			ledTicks = getTicks();
 			GPIOD->ODR ^= 1<<12;
 		}

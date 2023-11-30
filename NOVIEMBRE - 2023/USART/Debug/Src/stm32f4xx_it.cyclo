@@ -1,0 +1,2 @@
+../Src/stm32f4xx_it.c:23:6:SysTick_Handler	2
+../Src/stm32f4xx_it.c:31:6:USART1_IRQHandler	7

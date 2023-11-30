@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;USART&apos;" deleteContents="true" description="Delete resource &apos;USART&apos;" element1="/USART" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1701305833110"/>&#x0A;<refactoring comment="Delete resource &apos;USART/Drivers/CMSIS/Device/ST/STM32F4xx/Source&apos;" deleteContents="false" description="Delete resource &apos;USART/Drivers/CMSIS/Device/ST/STM32F4xx/Source&apos;" element1="/USART/Drivers/CMSIS/Device/ST/STM32F4xx/Source" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1701306081995"/>
+</session>

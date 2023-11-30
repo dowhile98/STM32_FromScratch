@@ -1,0 +1,3 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug/CMakeFiles/SysTick_IT.dir
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug/CMakeFiles/edit_cache.dir
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/SysTick_IT/build/Debug/CMakeFiles/rebuild_cache.dir

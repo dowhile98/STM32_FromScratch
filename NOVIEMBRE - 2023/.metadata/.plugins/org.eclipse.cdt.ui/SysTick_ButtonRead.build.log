@@ -1,0 +1,10 @@
+21:03:56 **** Incremental Build of configuration Debug for project SysTick_ButtonRead ****
+make -j8 all 
+arm-none-eabi-size   SysTick_ButtonRead.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6424	    200	   1920	   8544	   2160	SysTick_ButtonRead.elf
+Finished building: default.size.stdout
+ 
+
+21:03:57 Build Finished. 0 errors, 0 warnings. (took 463ms)
+
