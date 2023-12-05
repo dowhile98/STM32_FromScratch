@@ -1,0 +1,7 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/TIMER/Drivers/CMSIS/Include/core_cm4.h:1688:22:__NVIC_EnableIRQ	16	static
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/TIMER/Drivers/CMSIS/Include/core_cm4.h:1816:22:__NVIC_SetPriority	16	static
+../Src/main.c:38:5:__io_putchar	16	static
+../Src/main.c:46:6:dataReady	16	static
+../Src/main.c:53:5:main	8	static
+../Src/main.c:145:6:USART1_Config	4	static
+../Src/main.c:178:9:uart_send_data	32	static

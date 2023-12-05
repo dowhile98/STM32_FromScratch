@@ -1,25 +1,21 @@
-21:46:58 **** Incremental Build of configuration Debug for project USART ****
+21:57:18 **** Incremental Build of configuration Debug for project TIMER ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429xx -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/USART/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/USART/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-../Src/main.c: In function 'main':
-../Src/main.c:54:17: warning: unused variable 'txt' [-Wunused-variable]
-   54 |         uint8_t txt[50];
-      |                 ^~~
-arm-none-eabi-gcc -o "USART.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\NOVIEMBRE - 2023\USART\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="USART.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: USART.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429xx -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/TIMER/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/TIMER/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "TIMER.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\NOVIEMBRE - 2023\TIMER\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TIMER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: TIMER.elf
  
-arm-none-eabi-size  USART.elf 
-arm-none-eabi-objdump -h -S USART.elf  > "USART.list"
+arm-none-eabi-size   TIMER.elf 
+arm-none-eabi-objdump -h -S  TIMER.elf  > "TIMER.list"
    text	   data	    bss	    dec	    hex	filename
-  16152	    464	   2168	  18784	   4960	USART.elf
+  16436	    464	   2176	  19076	   4a84	TIMER.elf
 Finished building: default.size.stdout
  
-Finished building: USART.list
+Finished building: TIMER.list
  
-21:47:07 **** Incremental Build of configuration Debug for project USART ****
+21:57:24 **** Incremental Build of configuration Debug for project TIMER ****
 make -j8 all 
-arm-none-eabi-size  USART.elf 
+arm-none-eabi-size   TIMER.elf 
    text	   data	    bss	    dec	    hex	filename
-  16152	    464	   2168	  18784	   4960	USART.elf
+  16436	    464	   2176	  19076	   4a84	TIMER.elf
 Finished building: default.size.stdout
  

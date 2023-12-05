@@ -1,0 +1,3 @@
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/USART_ModBus/build/CMakeFiles/USART_NanoModbus.dir
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/USART_ModBus/build/CMakeFiles/edit_cache.dir
+D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/USART_ModBus/build/CMakeFiles/rebuild_cache.dir

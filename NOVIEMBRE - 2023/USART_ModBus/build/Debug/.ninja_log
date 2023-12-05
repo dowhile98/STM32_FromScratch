@@ -1,0 +1,23 @@
+# ninja log v5
+76	358	7230991651618514	CMakeFiles/SysTick_IT.dir/Startup/startup_stm32f429zitx.s.obj	6fb232b946c73e15
+18	870	7230991656701467	CMakeFiles/SysTick_IT.dir/Src/delay.c.obj	dfc5b4eaaa8ff1c5
+66	877	7230991656735889	CMakeFiles/SysTick_IT.dir/Src/system_stm32f4xx.c.obj	9994b2e7b4098f7f
+37	670	7230991653742875	CMakeFiles/SysTick_IT.dir/Src/syscalls.c.obj	179683617fb90e2c
+48	695	7230991654771202	CMakeFiles/SysTick_IT.dir/Src/sysmem.c.obj	2b183025c2235ebc
+6	849	7230991656501939	CMakeFiles/SysTick_IT.dir/Src/main.c.obj	74e0a460b2fdbba8
+28	864	7230991656641406	CMakeFiles/SysTick_IT.dir/Src/stm32f4xx_it.c.obj	d317523c9977860f
+877	1640	7230991662410020	SysTick_IT.elf	d21126014e09f4bf
+87	229	7231127483251418	CMakeFiles/USART_NanoModbus.dir/Startup/startup_stm32f429zitx.s.obj	9b0ab6e154c398ea
+58	434	7231127485240197	CMakeFiles/USART_NanoModbus.dir/Src/sysmem.c.obj	48782c876ae88f3c
+48	841	7231127489104962	CMakeFiles/USART_NanoModbus.dir/Src/syscalls.c.obj	ef36b2c48845df7d
+28	659	7231127487482146	CMakeFiles/USART_NanoModbus.dir/Src/delay.c.obj	f337d00591298c79
+18	819	7231127488405006	CMakeFiles/USART_NanoModbus.dir/Src/main.c.obj	4b68b126cf374c99
+64	1070	7231139872448119	Components/nanoModbus/CMakeFiles/nanoModbus.dir/nanomodbus.c.obj	584815fcff6041cf
+74	847	7231127489357441	CMakeFiles/USART_NanoModbus.dir/Src/system_stm32f4xx.c.obj	2beb56160f7e69e1
+38	849	7231127489357441	CMakeFiles/USART_NanoModbus.dir/Src/stm32f4xx_it.c.obj	ebd8b8b360265095
+86	1014	7231004451177607	CMakeFiles/USART_NanoModbus.dir/Src/nanomodbus.c.obj	fcec2102d972e81f
+485	931	7231033886095547	USART_NanoModbus.elf	5296f4173eb1f74c
+1072	1494	7231139876613460	Components/nanoModbus/libnanoModbus.a	e32fed2d113b1d63
+26	48	0	clean	766cbc4f7aab79de
+20	1004	7231142105955992	CMakeFiles/USART_NanoModbus.dir/Components/nanoModbus/nanomodbus.c.obj	e693df40d586fd67
+1005	1844	7231142111854950	USART_NanoModbus.elf	7e616bd4309f3074
