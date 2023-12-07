@@ -1,21 +1,21 @@
-21:57:18 **** Incremental Build of configuration Debug for project TIMER ****
+22:00:33 **** Incremental Build of configuration Debug for project ADC ****
 make -j8 all 
-arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429xx -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/TIMER/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/TIMER/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
-arm-none-eabi-gcc -o "TIMER.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\NOVIEMBRE - 2023\TIMER\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="TIMER.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: TIMER.elf
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F429xx -DSTM32 -DSTM32F429ZITx -DSTM32F4 -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/ADC/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/NOVIEMBRE - 2023/ADC/Drivers/CMSIS/Include" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "ADC.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\NOVIEMBRE - 2023\ADC\STM32F429ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ADC.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: ADC.elf
  
-arm-none-eabi-size   TIMER.elf 
-arm-none-eabi-objdump -h -S  TIMER.elf  > "TIMER.list"
+arm-none-eabi-size   ADC.elf 
+arm-none-eabi-objdump -h -S  ADC.elf  > "ADC.list"
    text	   data	    bss	    dec	    hex	filename
-  16436	    464	   2176	  19076	   4a84	TIMER.elf
+  16512	    464	   2176	  19152	   4ad0	ADC.elf
 Finished building: default.size.stdout
  
-Finished building: TIMER.list
+Finished building: ADC.list
  
-21:57:24 **** Incremental Build of configuration Debug for project TIMER ****
+22:00:47 **** Incremental Build of configuration Debug for project ADC ****
 make -j8 all 
-arm-none-eabi-size   TIMER.elf 
+arm-none-eabi-size   ADC.elf 
    text	   data	    bss	    dec	    hex	filename
-  16436	    464	   2176	  19076	   4a84	TIMER.elf
+  16512	    464	   2176	  19152	   4ad0	ADC.elf
 Finished building: default.size.stdout
  
