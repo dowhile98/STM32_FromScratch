@@ -1,0 +1,259 @@
+[
+    {
+        "id": "b65bc07924bf0ae7",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5f369e4b.ca9d9c",
+        "type": "mqtt out",
+        "z": "b65bc07924bf0ae7",
+        "name": "Control de LED",
+        "topic": "Led/control",
+        "qos": "0",
+        "retain": "false",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "a35e0b702fa2eb9e",
+        "x": 620,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "8439e93c.0d2d08",
+        "type": "ui_button",
+        "z": "b65bc07924bf0ae7",
+        "name": "Botón LED",
+        "group": "d00d57c7.63b35",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Controlar LED",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "brightness_7",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "",
+        "topicType": "str",
+        "x": 130,
+        "y": 280,
+        "wires": [
+            [
+                "75456d6f35f46f0f"
+            ]
+        ]
+    },
+    {
+        "id": "a06840df.4073e8",
+        "type": "mqtt in",
+        "z": "b65bc07924bf0ae7",
+        "name": "Estado del LED",
+        "topic": "Led/estado",
+        "qos": "0",
+        "datatype": "auto-detect",
+        "broker": "a35e0b702fa2eb9e",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "555ba8d00e581f6c",
+                "cdeebbba43743b49"
+            ]
+        ]
+    },
+    {
+        "id": "f5b20721.119f38",
+        "type": "ui_text",
+        "z": "b65bc07924bf0ae7",
+        "group": "d00d57c7.63b35",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "Texto LED",
+        "label": "Estado del LED:",
+        "format": "{{msg.led? 'Encendido' : 'Apagado'}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 630,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "28bfe22531ed66b0",
+        "type": "ui_chart",
+        "z": "b65bc07924bf0ae7",
+        "name": "Gráfico de Temperatura",
+        "group": "d00d57c7.63b35",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Temperatura",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "30",
+        "removeOlder": "10",
+        "removeOlderPoints": "10",
+        "removeOlderUnit": "3600",
+        "cutout": "",
+        "useOneColor": true,
+        "useUTC": true,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 630,
+        "y": 480,
+        "wires": [
+            [
+                "0f9e1df09d33a156"
+            ]
+        ]
+    },
+    {
+        "id": "0f9e1df09d33a156",
+        "type": "ui_text",
+        "z": "b65bc07924bf0ae7",
+        "group": "d00d57c7.63b35",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "Valor de Temperatura",
+        "label": "Valor actual:",
+        "format": "{{msg.temperature}} °C",
+        "layout": "row-spread",
+        "className": "",
+        "x": 880,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "555ba8d00e581f6c",
+        "type": "function",
+        "z": "b65bc07924bf0ae7",
+        "name": "function 1",
+        "func": "msg.led = msg.payload.led;\nvar currentLedState = msg.led;\nvar data = msg.payload.temperature;\nmsg.payload = data;\nmsg.temperature = data;\nflow.set('ledState', currentLedState);\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "f5b20721.119f38",
+                "28bfe22531ed66b0"
+            ]
+        ]
+    },
+    {
+        "id": "cdeebbba43743b49",
+        "type": "debug",
+        "z": "b65bc07924bf0ae7",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "75456d6f35f46f0f",
+        "type": "function",
+        "z": "b65bc07924bf0ae7",
+        "name": "Preparar Mensaje",
+        "func": "var currentLedState = flow.get('ledState') || false;\ncurrentLedState = !currentLedState;\nmsg.payload = {\n    ledState: currentLedState,\n};\nflow.set('ledState', currentLedState);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 280,
+        "wires": [
+            [
+                "5f369e4b.ca9d9c"
+            ]
+        ]
+    },
+    {
+        "id": "a35e0b702fa2eb9e",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "d00d57c7.63b35",
+        "type": "ui_group",
+        "name": "LED Control",
+        "tab": "c20dbf52.e7f318",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c20dbf52.e7f318",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    }
+]

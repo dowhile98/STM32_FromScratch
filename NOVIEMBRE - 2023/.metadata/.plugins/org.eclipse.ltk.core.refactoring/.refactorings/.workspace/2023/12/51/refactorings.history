@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;ETH_MQTT_SPI_I2C/ETH_MQTT_SPI.launch&apos;" deleteContents="false" description="Delete resource &apos;ETH_MQTT_SPI_I2C/ETH_MQTT_SPI.launch&apos;" element1="/ETH_MQTT_SPI_I2C/ETH_MQTT_SPI.launch" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1703123037897"/>
+</session>

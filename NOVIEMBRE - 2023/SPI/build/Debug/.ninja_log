@@ -1,0 +1,20 @@
+# ninja log v5
+41	701	7222365632777735	CMakeFiles/SysTick_IT.dir/Src/system_stm32f4xx.c.obj	b83faf32b404fc31
+53	186	7222365627597158	CMakeFiles/SysTick_IT.dir/Startup/startup_stm32f407vgtx.s.obj	eb7063a0ebcbfd9e
+40	602	7222372649595750	CMakeFiles/SysTick_IT.dir/Src/delay.c.obj	a425935a8eb43de1
+30	461	7222365630261695	CMakeFiles/SysTick_IT.dir/Src/sysmem.c.obj	bc476b95fd8f8d97
+6	639	7222387060191998	build.ninja	2997100cdcea82e7
+19	517	7222365630907772	CMakeFiles/SysTick_IT.dir/Src/syscalls.c.obj	71726e69c9841bc0
+28	659	7222372650149170	CMakeFiles/SysTick_IT.dir/Src/main.c.obj	4509bfb21d0feed3
+659	1255	7222372653360605	SysTick_IT.elf	222d3154156da3b
+50	594	7222372649480020	CMakeFiles/SysTick_IT.dir/Src/stm32f4xx_it.c.obj	600bbd1d4911fdb6
+42	421	7222387357467237	CMakeFiles/SysTick_IT.dir/Src/stm32f4xx_it.c.obj	421a723c3f037555
+32	425	7222387357527248	CMakeFiles/SysTick_IT.dir/Src/delay.c.obj	dff26b3217a0a2e7
+82	490	7222387358144903	CMakeFiles/SysTick_IT.dir/Startup/startup_stm32f407vgtx.s.obj	de872aafb6324ff1
+60	638	7222387359635673	CMakeFiles/SysTick_IT.dir/Src/sysmem.c.obj	a50130f02be0c79b
+69	817	7222387361446761	CMakeFiles/SysTick_IT.dir/Src/system_stm32f4xx.c.obj	b14f7060b972023f
+22	827	7222387361546789	CMakeFiles/SysTick_IT.dir/Src/main.c.obj	cc366666801d3599
+51	924	7222387362523389	CMakeFiles/SysTick_IT.dir/Src/syscalls.c.obj	8a73877f1797ae4
+924	1559	7222387366801460	SysTick_IT.elf	1d8485f559fbb6b7
+53	972	7222400177854736	CMakeFiles/SysTick_IT.dir/Src/main.c.obj	cc366666801d3599
+973	1825	7222400184642980	SysTick_IT.elf	1d8485f559fbb6b7

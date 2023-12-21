@@ -6,8 +6,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="STM32F429ZI"/>
+		<item key="selection" value="__FPU_PRESENT"/>
 		<list key="findhistory">
+			<item value="__FPU_PRESENT"/>
 			<item value="STM32F429ZI"/>
 			<item value="STM32F429Z"/>
 			<item value="LWBTN_CFG_TIME_KEEPALIVE_PERIOD"/>
