@@ -1,0 +1,3 @@
+../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_ll_dma.c:109:13:LL_DMA_DeInit	8	static
+../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_ll_dma.c:194:13:LL_DMA_Init	12	static
+../Drivers/STM32C0xx_HAL_Driver/Src/stm32c0xx_ll_dma.c:262:6:LL_DMA_StructInit	0	static

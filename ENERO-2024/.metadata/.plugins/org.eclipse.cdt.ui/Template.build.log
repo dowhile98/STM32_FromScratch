@@ -1,0 +1,23 @@
+21:53:37 **** Incremental Build of configuration Debug for project Template ****
+make -j8 all 
+arm-none-eabi-gcc "../Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F407xx -DSTM32 -DSTM32F4 -DSTM32F407VGTx -c -I../Inc -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ENERO-2024/Template/Drivers/CMSIS/Include" -I"D:/TRABAJO/UMAKER/CURSOS/ARM - NUCLEO/STM32_FromScratch/ENERO-2024/Template/Drivers/CMSIS/Device/ST/STM32F4xx/Include" -Og -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Src/main.d" -MT"Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Src/main.o"
+arm-none-eabi-gcc -o "Template.elf" @"objects.list"   -mcpu=cortex-m4 -T"D:\TRABAJO\UMAKER\CURSOS\ARM - NUCLEO\STM32_FromScratch\ENERO-2024\Template\STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Template.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Template.elf
+ 
+arm-none-eabi-size   Template.elf 
+arm-none-eabi-objdump -h -S  Template.elf  > "Template.list"
+arm-none-eabi-objcopy  -O ihex  Template.elf  "Template.hex"
+arm-none-eabi-objcopy  -O binary  Template.elf  "Template.bin"
+   text	   data	    bss	    dec	    hex	filename
+  15252	    464	   1904	  17620	   44d4	Template.elf
+Finished building: default.size.stdout
+ 
+Finished building: Template.hex
+Finished building: Template.bin
+ 
+ 
+Finished building: Template.list
+ 
+
+21:53:38 Build Finished. 0 errors, 0 warnings. (took 1s.283ms)
+
